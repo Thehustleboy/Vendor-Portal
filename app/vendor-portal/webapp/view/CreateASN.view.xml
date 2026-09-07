@@ -1,0 +1,10 @@
+<mvc:View controllerName="msu.vendorportal.controller.CreateASN" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <Page title="Create ASN" showNavButton="true" navButtonPress="onNavBack" class="msuPage">
+        <content>
+            <VBox class="sapUiMediumMargin">
+                <Title text="Create ASN" level="H2"/>
+                <Text text="ASN creation form coming soon" class="sapUiSmallMarginTop"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

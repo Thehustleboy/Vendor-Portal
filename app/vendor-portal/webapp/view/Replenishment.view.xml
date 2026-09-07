@@ -1,0 +1,155 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.Replenishment"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+
+    <Page showHeader="false" class="msuPage">
+        <content>
+
+            <!-- ========== BREADCRUMB HEADER ========== -->
+            <HBox alignItems="Center" class="msuContentHeader">
+                <Button 
+                    icon="sap-icon://navigation-left-arrow" 
+                    type="Transparent" 
+                    text="All Tools" 
+                    press="onNavBack"
+                    class="msuBackBtn"/>
+                <Title text="Replenishment Request" level="H2" class="msuPageTitle sapUiSmallMarginBegin"/>
+            </HBox>
+
+            <VBox class="msuFormCard">
+
+                <!-- SHIP TO STORE -->
+                <Label text="SHIP TO STORE" class="msuFormLabel"/>
+                <Select 
+                    selectedKey="{local>/replenish/store}" 
+                    width="100%" 
+                    class="sapUiTinyMarginTop">
+                    <items>
+                        <core:Item key="Vijayawada"     text="Vijayawada · Vijayawada"/>
+                        <core:Item key="Commercial St." text="Commercial St. · Bengaluru"/>
+                        <core:Item key="Jubilee Hills"  text="Jubilee Hills · Hyderabad"/>
+                        <core:Item key="HSR Layout"     text="HSR Layout · Bengaluru"/>
+                    </items>
+                </Select>
+
+                <!-- REASON -->
+                <Label text="REASON" class="msuFormLabel sapUiMediumMarginTop"/>
+                <Select 
+                    selectedKey="{local>/replenish/reason}" 
+                    width="100%" 
+                    class="sapUiTinyMarginTop">
+                    <items>
+                        <core:Item key="Stock running low"    text="Stock running low"/>
+                        <core:Item key="High demand"          text="High demand"/>
+                        <core:Item key="Seasonal restock"     text="Seasonal restock"/>
+                        <core:Item key="Damaged items"        text="Damaged items"/>
+                        <core:Item key="New store opening"    text="New store opening"/>
+                    </items>
+                </Select>
+
+                <!-- NOTE -->
+                <Label text="NOTE TO BUYER (OPTIONAL)" class="msuFormLabel sapUiMediumMarginTop"/>
+                <TextArea 
+                    value="{local>/replenish/note}" 
+                    placeholder="Any details..."
+                    rows="3"
+                    width="100%"
+                    class="sapUiTinyMarginTop"/>
+
+                <!-- SKU LINES -->
+                <Label text="SKU LINES" class="msuFormLabel sapUiMediumMarginTop"/>
+
+                <!-- SKU Card -->
+                <VBox class="msuSkuCard sapUiTinyMarginTop">
+                    <HBox alignItems="Center">
+                        <Select 
+                            selectedKey="{local>/replenish/currentSku/name}" 
+                            class="msuSkuSelect">
+                            <items>
+                                <core:Item key="Kanjeevaram Saree" text="Kanjeevaram Saree"/>
+                                <core:Item key="Silk Saree"        text="Silk Saree"/>
+                                <core:Item key="Cotton Saree"      text="Cotton Saree"/>
+                            </items>
+                        </Select>
+                        <Input 
+                            value="{local>/replenish/currentSku/qty}" 
+                            type="Number" 
+                            width="80px"
+                            textAlign="Center"
+                            class="sapUiTinyMarginBegin"/>
+                        <Button 
+                            icon="sap-icon://decline" 
+                            type="Transparent" 
+                            press="onRemoveSku"
+                            class="msuRemoveBtn"/>
+                    </HBox>
+
+                    <!-- Specification Toggle -->
+                    <Link text="Specification ▾" press="onToggleSpec" class="msuSpecToggle sapUiSmallMarginTop"/>
+
+                    <!-- Specification Rows -->
+                    <VBox class="msuSpecBox sapUiTinyMarginTop">
+                        <HBox class="msuSpecRow">
+                            <CheckBox selected="true" class="msuSpecCheck"/>
+                            <Text text="Colour" class="msuSpecLabel"/>
+                            <Text text="Dusty Rose" class="msuSpecValue"/>
+                        </HBox>
+                        <HBox class="msuSpecRow">
+                            <CheckBox selected="true" class="msuSpecCheck"/>
+                            <Text text="Size" class="msuSpecLabel"/>
+                            <Text text="XS/S" class="msuSpecValue"/>
+                        </HBox>
+                        <HBox class="msuSpecRow">
+                            <CheckBox selected="true" class="msuSpecCheck"/>
+                            <Text text="Design No" class="msuSpecLabel"/>
+                            <Text text="MSU-DN-8940" class="msuSpecValue"/>
+                        </HBox>
+                        <HBox class="msuSpecRow">
+                            <CheckBox selected="true" class="msuSpecCheck"/>
+                            <Text text="Shade No" class="msuSpecLabel"/>
+                            <Text text="SH-867" class="msuSpecValue"/>
+                        </HBox>
+                        <HBox class="msuSpecRow">
+                            <CheckBox selected="true" class="msuSpecCheck"/>
+                            <Text text="Weight" class="msuSpecLabel"/>
+                            <Text text="1.2kg" class="msuSpecValue"/>
+                        </HBox>
+                        <HBox class="msuSpecRow">
+                            <CheckBox selected="true" class="msuSpecCheck"/>
+                            <Text text="Designer" class="msuSpecLabel"/>
+                            <Text text="Kishore Patel" class="msuSpecValue"/>
+                        </HBox>
+                        <HBox class="msuSpecRow">
+                            <CheckBox selected="true" class="msuSpecCheck"/>
+                            <Text text="Merchandiser" class="msuSpecLabel"/>
+                            <Text text="Arjun Das" class="msuSpecValue"/>
+                        </HBox>
+                        <HBox class="msuSpecRow">
+                            <CheckBox selected="true" class="msuSpecCheck"/>
+                            <Text text="Condition" class="msuSpecLabel"/>
+                            <Text text="Acceptable" class="msuSpecValue"/>
+                        </HBox>
+                    </VBox>
+                </VBox>
+
+                <!-- ADD ANOTHER SKU -->
+                <Button 
+                    text="+ Add another SKU" 
+                    press="onAddSku" 
+                    class="msuAddSkuBtn sapUiMediumMarginTop"/>
+
+                <!-- SUBMIT -->
+                <Button 
+                    text="Submit Request" 
+                    type="Attention" 
+                    press="onSubmitRequest" 
+                    class="msuFullBtn sapUiMediumMarginTop"/>
+
+            </VBox>
+
+        </content>
+    </Page>
+</mvc:View>

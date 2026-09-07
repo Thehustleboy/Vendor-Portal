@@ -1,0 +1,539 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.StockDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page
+        showHeader="false"
+        class="msuPage">
+
+        <content>
+
+            <VBox class="msuStockDetailPage">
+
+
+                <!-- ============================================
+                     BACK
+                     ============================================ -->
+
+                <Button
+                    text="Back to Stock"
+                    icon="sap-icon://nav-back"
+                    type="Transparent"
+                    press="onBack"
+                    class="msuBackBtn"/>
+
+
+                <!-- ============================================
+                     HEADER
+                     ============================================ -->
+
+                <HBox
+                    justifyContent="SpaceBetween"
+                    alignItems="Center"
+                    class="sapUiMediumMarginTop msuDetailHeader">
+
+
+                    <VBox>
+
+                        <Text
+                            text="{local>category}"
+                            class="msuProductCategory"/>
+
+                        <Title
+                            text="{local>name}"
+                            level="H1"
+                            class="msuDetailProductTitle"/>
+
+                        <Text
+                            text="{local>store}"
+                            class="msuPageSub"/>
+
+                        <Text
+                            text="PO {local>po}"
+                            class="msuPageSub"/>
+
+                    </VBox>
+
+
+                    <ObjectStatus
+                        text="{local>health}"
+                        state="{= ${local>health} === 'Healthy' ? 'Success' : 'Warning' }"
+                        inverted="true"
+                        class="msuStatusPill"/>
+
+                </HBox>
+
+
+                <!-- ============================================
+                     MAIN PRODUCT AREA
+                     ============================================ -->
+
+                <HBox
+                    wrap="Wrap"
+                    alignItems="Start"
+                    class="sapUiLargeMarginTop msuStockDetailBody">
+
+
+                    <!-- ========================================
+                         LEFT IMAGE AREA
+                         ======================================== -->
+
+                    <VBox
+                        class="msuStockDetailImageSection">
+
+
+                        <!-- MAIN ONLINE IMAGE -->
+
+                        <Image
+                            src="{local>selectedImage}"
+                            densityAware="false"
+                            decorative="false"
+                            alt="{local>name}"
+                            class="msuStockDetailMainImage"/>
+
+
+                        <!-- THUMBNAILS -->
+
+                        <HBox
+                            items="{local>images}"
+                            wrap="Wrap"
+                            class="msuThumbnailRow">
+
+                            <Image
+                                src="{local>url}"
+                                densityAware="false"
+                                decorative="false"
+                                press="onImagePress"
+                                class="msuStockThumbnail"/>
+
+                        </HBox>
+
+                    </VBox>
+
+
+                    <!-- ========================================
+                         RIGHT DETAILS
+                         ======================================== -->
+
+                    <VBox
+                        class="msuStockDetailInfo">
+
+
+                        <Title
+                            text="Product Details"
+                            level="H4"
+                            class="msuDetailSectionTitle"/>
+
+
+                        <!-- DESCRIPTION -->
+
+                        <Text
+                            text="{local>description}"
+                            wrapping="true"
+                            class="msuProductDescription"/>
+
+
+                        <!-- COLOR -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Color"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>color}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- MATERIAL -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Material"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>material}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- DESIGN -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Design No."
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>designNo}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- PATTERN -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Pattern"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>pattern}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- ZARI -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Zari"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>zari}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- LENGTH -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Length"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>length}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- WIDTH -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Width"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>width}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- BLOUSE -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Blouse Piece"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>blousePiece}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- ORIGIN -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Origin"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>origin}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- OCCASION -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Occasion"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>occasion}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- CONDITION -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Condition"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>condition}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- WEIGHT -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Weight"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>weight}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- SHELF -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Shelf"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>shelf}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+
+                        <!-- CARE -->
+
+                        <HBox class="msuDetailRow">
+
+                            <Text
+                                text="Care"
+                                class="msuDetailLabel"/>
+
+                            <Text
+                                text="{local>care}"
+                                class="msuDetailValue"/>
+
+                        </HBox>
+
+                    </VBox>
+
+                </HBox>
+
+
+                <!-- ============================================
+                     LOCATION / PO
+                     ============================================ -->
+
+                <VBox
+                    class="sapUiLargeMarginTop">
+
+                    <Title
+                        text="Inventory Information"
+                        level="H4"
+                        class="msuDetailSectionTitle"/>
+
+
+                    <HBox
+                        wrap="Wrap"
+                        class="msuDetailInfoCards">
+
+
+                        <VBox class="msuMiniDetailCard">
+
+                            <Text
+                                text="STORE"
+                                class="msuMiniLabel"/>
+
+                            <Text
+                                text="{local>store}"
+                                class="msuMiniValue"/>
+
+                        </VBox>
+
+
+                        <VBox class="msuMiniDetailCard">
+
+                            <Text
+                                text="PURCHASE ORDER"
+                                class="msuMiniLabel"/>
+
+                            <Text
+                                text="{local>po}"
+                                class="msuMiniValue"/>
+
+                        </VBox>
+
+
+                        <VBox class="msuMiniDetailCard">
+
+                            <Text
+                                text="SHELF"
+                                class="msuMiniLabel"/>
+
+                            <Text
+                                text="{local>shelf}"
+                                class="msuMiniValue"/>
+
+                        </VBox>
+
+
+                        <VBox class="msuMiniDetailCard">
+
+                            <Text
+                                text="DESIGN"
+                                class="msuMiniLabel"/>
+
+                            <Text
+                                text="{local>designNo}"
+                                class="msuMiniValue"/>
+
+                        </VBox>
+
+                    </HBox>
+
+                </VBox>
+
+
+                <!-- ============================================
+                     HANDLED BY
+                     ============================================ -->
+
+                <VBox
+                    class="sapUiLargeMarginTop">
+
+                    <Title
+                        text="Handled By"
+                        level="H4"
+                        class="msuDetailSectionTitle"/>
+
+
+                    <HBox
+                        wrap="Wrap"
+                        class="sapUiSmallMarginTop msuTagRow">
+
+                        <ObjectStatus
+                            text="{local>staff/0}"
+                            state="Information"
+                            inverted="true"
+                            class="msuTag msuStaffTag"/>
+
+                        <ObjectStatus
+                            text="{local>staff/1}"
+                            state="Information"
+                            inverted="true"
+                            class="msuTag msuStaffTag"/>
+
+                    </HBox>
+
+                </VBox>
+
+
+                <!-- ============================================
+                     STOCK SUMMARY
+                     ============================================ -->
+
+                <VBox
+                    class="sapUiLargeMarginTop">
+
+                    <Title
+                        text="Stock Summary"
+                        level="H4"
+                        class="msuDetailSectionTitle"/>
+
+
+                    <HBox
+                        justifyContent="SpaceAround"
+                        class="sapUiSmallMarginTop msuStockDetailMetrics">
+
+
+                        <VBox alignItems="Center">
+
+                            <Title
+                                text="{local>onHand}"
+                                level="H2"
+                                class="msuDetailMetricNumber"/>
+
+                            <Text
+                                text="On Hand"
+                                class="msuMetricLabel"/>
+
+                        </VBox>
+
+
+                        <VBox alignItems="Center">
+
+                            <Title
+                                text="{local>allocated}"
+                                level="H2"
+                                class="msuDetailMetricNumber"/>
+
+                            <Text
+                                text="Allocated"
+                                class="msuMetricLabel"/>
+
+                        </VBox>
+
+
+                        <VBox alignItems="Center">
+
+                            <Title
+                                text="{local>fillRate}%"
+                                level="H2"
+                                class="msuDetailMetricNumber"/>
+
+                            <Text
+                                text="Fill Rate"
+                                class="msuMetricLabel"/>
+
+                        </VBox>
+
+                    </HBox>
+
+
+                    <ProgressIndicator
+                        percentValue="{local>fillRate}"
+                        displayValue="{= ${local>fillRate} + '%' }"
+                        state="{= ${local>fillRate} >= 80 ? 'Success' : ${local>fillRate} >= 60 ? 'Warning' : 'Error' }"
+                        showValue="true"
+                        class="sapUiMediumMarginTop msuDetailProgress"/>
+
+                </VBox>
+
+
+                <VBox height="40px"/>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

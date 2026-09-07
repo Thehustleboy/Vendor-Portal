@@ -1,0 +1,36 @@
+<mvc:View controllerName="msu.vendorportal.controller.Settings" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <Page showHeader="false" class="msuPage">
+        <content>
+            <HBox alignItems="Center" class="msuContentHeader">
+                <Button icon="sap-icon://navigation-left-arrow" type="Transparent" text="All Tools" press="onNavBack" class="msuBackBtn"/>
+                <Title text="Settings" level="H2" class="msuPageTitle sapUiSmallMarginBegin"/>
+            </HBox>
+            <VBox class="msuFormCard">
+                <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                    <Avatar initials="KS" customDisplaySize="64px" backgroundColor="Accent6"/>
+                    <VBox class="sapUiSmallMarginBegin">
+                        <Title text="Kanchipuram Silk" level="H4"/>
+                        <Text text="Vendor ID: V001"/>
+                    </VBox>
+                </HBox>
+                <Label text="PROFILE INFORMATION" class="msuFormLabel sapUiMediumMarginTop"/>
+                <f:SimpleForm editable="true" layout="ColumnLayout" columnsL="2" columnsM="2" class="msuIdForm sapUiTinyMarginTop">
+                    <Label text="Business Name"/>
+                    <Input value="Kanchipuram Silk"/>
+                    <Label text="Owner Name"/>
+                    <Input value="Ravi Kumar"/>
+                    <Label text="Email"/>
+                    <Input value="ravi@kanchipuram.com"/>
+                    <Label text="Phone"/>
+                    <Input value="+91 98765 43210"/>
+                    <Label text="GST Number"/>
+                    <Input value="33ABCDE1234F1Z5"/>
+                    <Label text="City"/>
+                    <Input value="Kanchipuram"/>
+                </f:SimpleForm>
+                <Button text="Change Password" icon="sap-icon://key" press="onChangePassword" class="sapUiMediumMarginTop"/>
+                <Button text="Save Settings" type="Attention" press="onSave" class="msuFullBtn sapUiMediumMarginTop"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

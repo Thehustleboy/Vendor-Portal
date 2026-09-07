@@ -1,0 +1,292 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.Stock"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+
+    <Page
+        showHeader="false"
+        class="msuPage">
+
+        <content>
+
+            <VBox class="msuContentHeader">
+
+                <Title
+                    text="My Stock"
+                    level="H2"
+                    class="msuPageTitle"/>
+
+                <Text
+                    text="Inventory on MSU books across stores"
+                    class="msuPageSub"/>
+
+            </VBox>
+
+
+            <!-- STORE FILTER -->
+
+            <SegmentedButton
+                id="storeSegmentedButton"
+                selectedKey="{local>/selectedStore}"
+                selectionChange="onStoreChange"
+                class="msuStoreTabs">
+
+                <items>
+
+                    <SegmentedButtonItem
+                        text="All"
+                        key="All"/>
+
+                    <SegmentedButtonItem
+                        text="Commercial St."
+                        key="Commercial St."/>
+
+                    <SegmentedButtonItem
+                        text="Jubilee Hills"
+                        key="Jubilee Hills"/>
+
+                    <SegmentedButtonItem
+                        text="HSR Layout"
+                        key="HSR Layout"/>
+
+                    <SegmentedButtonItem
+                        text="Vijayawada"
+                        key="Vijayawada"/>
+
+                </items>
+
+            </SegmentedButton>
+
+
+            <!-- STOCK GRID -->
+
+            <l:Grid
+                id="stockGrid"
+                defaultSpan="XL6 L6 M12 S12"
+                hSpacing="1"
+                vSpacing="1"
+                class="msuStockGrid"
+                content="{local>/stockItems}">
+
+
+                <!-- CLICKABLE TILE -->
+
+                <CustomTile
+                    press="onStockPress"
+                    class="msuStockTile">
+
+                    <content>
+
+                        <VBox
+                            class="msuStockCard">
+
+                            <VBox
+                                class="msuStockCardInner">
+
+
+                                <!-- HEADER -->
+
+                                <HBox
+                                    justifyContent="SpaceBetween"
+                                    alignItems="Start"
+                                    class="msuStockCardHeader">
+
+
+                                    <HBox
+                                        alignItems="Center"
+                                        class="msuStockProductHeader">
+
+
+                                        <Image
+                                            src="{local>image}"
+                                            densityAware="false"
+                                            decorative="false"
+                                            alt="{local>name}"
+                                            class="msuStockProductImage"/>
+
+
+                                        <VBox
+                                            class="msuStockProductInfo">
+
+                                            <Title
+                                                text="{local>name}"
+                                                level="H5"
+                                                class="msuStockProductTitle"/>
+
+                                            <Text
+                                                text="{local>store}"
+                                                class="msuStockSubtext"/>
+
+                                            <Text
+                                                text="PO {local>po}"
+                                                class="msuStockSubtext"/>
+
+                                        </VBox>
+
+                                    </HBox>
+
+
+                                    <ObjectStatus
+                                        text="{local>health}"
+                                        state="{= ${local>health} === 'Healthy' ? 'Success' : 'Warning' }"
+                                        inverted="true"
+                                        class="msuStatusPill"/>
+
+                                </HBox>
+
+
+                                <!-- PRODUCT TAGS -->
+
+                                <HBox
+                                    wrap="Wrap"
+                                    class="sapUiSmallMarginTop msuTagRow">
+
+                                    <ObjectStatus
+                                        text="{local>tags/0}"
+                                        state="Warning"
+                                        inverted="true"
+                                        class="msuTag"/>
+
+                                    <ObjectStatus
+                                        text="{local>tags/1}"
+                                        state="Warning"
+                                        inverted="true"
+                                        class="msuTag"/>
+
+                                    <ObjectStatus
+                                        text="{local>tags/2}"
+                                        state="Warning"
+                                        inverted="true"
+                                        class="msuTag"/>
+
+                                    <ObjectStatus
+                                        text="{local>tags/3}"
+                                        state="Warning"
+                                        inverted="true"
+                                        class="msuTag"/>
+
+                                    <ObjectStatus
+                                        text="{local>tags/4}"
+                                        state="Warning"
+                                        inverted="true"
+                                        class="msuTag"/>
+
+                                    <ObjectStatus
+                                        text="{local>tags/5}"
+                                        state="Warning"
+                                        inverted="true"
+                                        class="msuTag"/>
+
+                                </HBox>
+
+
+                                <!-- STAFF -->
+
+                                <HBox
+                                    wrap="Wrap"
+                                    class="sapUiTinyMarginTop msuTagRow">
+
+                                    <ObjectStatus
+                                        text="{local>staff/0}"
+                                        state="Information"
+                                        inverted="true"
+                                        class="msuTag msuStaffTag"/>
+
+                                    <ObjectStatus
+                                        text="{local>staff/1}"
+                                        state="Information"
+                                        inverted="true"
+                                        class="msuTag msuStaffTag"/>
+
+                                </HBox>
+
+
+                                <!-- STOCK NUMBERS -->
+
+                                <HBox
+                                    justifyContent="SpaceAround"
+                                    class="sapUiMediumMarginTop msuStockMetrics">
+
+
+                                    <VBox alignItems="Center">
+
+                                        <Title
+                                            text="{local>onHand}"
+                                            level="H4"
+                                            class="msuMetricValue"/>
+
+                                        <Text
+                                            text="On Hand"
+                                            class="msuMetricLabel"/>
+
+                                    </VBox>
+
+
+                                    <VBox alignItems="Center">
+
+                                        <Title
+                                            text="{local>allocated}"
+                                            level="H4"
+                                            class="msuMetricValue"/>
+
+                                        <Text
+                                            text="Allocated"
+                                            class="msuMetricLabel"/>
+
+                                    </VBox>
+
+
+                                    <VBox alignItems="Center">
+
+                                        <Title
+                                            text="{local>fillRate}%"
+                                            level="H4"
+                                            class="msuMetricValue"/>
+
+                                        <Text
+                                            text="Fill Rate"
+                                            class="msuMetricLabel"/>
+
+                                    </VBox>
+
+                                </HBox>
+
+
+                                <!-- PROGRESS -->
+
+                                <ProgressIndicator
+                                    percentValue="{local>fillRate}"
+                                    state="{= ${local>fillRate} >= 80 ? 'Success' : ${local>fillRate} >= 60 ? 'Warning' : 'Error' }"
+                                    showValue="false"
+                                    height="6px"
+                                    class="sapUiTinyMarginTop msuProgress"/>
+
+
+                                <!-- VIEW DETAIL -->
+
+                                <HBox
+                                    justifyContent="End"
+                                    class="sapUiSmallMarginTop">
+
+                                    <Text
+                                        text="View Details →"
+                                        class="msuViewDetails"/>
+
+                                </HBox>
+
+                            </VBox>
+
+                        </VBox>
+
+                    </content>
+
+                </CustomTile>
+
+            </l:Grid>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

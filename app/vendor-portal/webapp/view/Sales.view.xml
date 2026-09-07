@@ -1,0 +1,169 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.Sales"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+
+    <Page showHeader="false" class="msuPage">
+        <content>
+
+            <!-- ========== HEADER ========== -->
+            <HBox justifyContent="SpaceBetween" alignItems="Center" class="msuContentHeader">
+                <VBox>
+                    <Title text="Sales" level="H2" class="msuPageTitle"/>
+                    <Text text="Sales performance across stores" class="msuPageSub"/>
+                </VBox>
+                <Button text="Export" icon="sap-icon://excel-attachment" type="Attention" class="msuSyncBtn" press="onExport"/>
+            </HBox>
+
+            <!-- ========== KPI CARDS ========== -->
+            <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="1" vSpacing="1" class="msuKpiGrid">
+
+                <VBox class="msuKpiCard">
+                    <Title text="₹7.7L" class="msuKpiValue"/>
+                    <Text text="TOTAL SALES (YTD)" class="msuKpiLabel"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <Title text="₹1.2L" class="msuKpiValue"/>
+                    <Text text="THIS MONTH" class="msuKpiLabel"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <Title text="147" class="msuKpiValue"/>
+                    <Text text="ORDERS" class="msuKpiLabel"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <Title text="₹5,240" class="msuKpiValue"/>
+                    <Text text="AVG ORDER VALUE" class="msuKpiLabel"/>
+                </VBox>
+
+            </l:Grid>
+
+            <!-- ========== TOP SELLING ITEMS ========== -->
+            <Title text="TOP SELLING PRODUCTS" class="msuSectionTitle"/>
+
+            <List class="msuOrderList" showSeparators="None">
+
+                <CustomListItem class="msuOrderItem">
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiSmallMargin">
+                        <HBox alignItems="Center">
+                            <Avatar initials="KS" customDisplaySize="44px" backgroundColor="Accent6"/>
+                            <VBox class="sapUiSmallMarginBegin">
+                                <Title text="Kanjeevaram Saree" level="H5"/>
+                                <Text text="Best seller • 52 pcs sold this month" class="msuOrderQty"/>
+                            </VBox>
+                        </HBox>
+                        <VBox alignItems="End">
+                            <Title text="₹3.1L" level="H5"/>
+                            <ObjectStatus text="+18%" state="Success" inverted="true" class="msuStatusPill"/>
+                        </VBox>
+                    </HBox>
+                </CustomListItem>
+
+                <CustomListItem class="msuOrderItem">
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiSmallMargin">
+                        <HBox alignItems="Center">
+                            <Avatar initials="SS" customDisplaySize="44px" backgroundColor="Accent6"/>
+                            <VBox class="sapUiSmallMarginBegin">
+                                <Title text="Silk Saree" level="H5"/>
+                                <Text text="Premium • 38 pcs sold this month" class="msuOrderQty"/>
+                            </VBox>
+                        </HBox>
+                        <VBox alignItems="End">
+                            <Title text="₹2.4L" level="H5"/>
+                            <ObjectStatus text="+12%" state="Success" inverted="true" class="msuStatusPill"/>
+                        </VBox>
+                    </HBox>
+                </CustomListItem>
+
+                <CustomListItem class="msuOrderItem">
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiSmallMargin">
+                        <HBox alignItems="Center">
+                            <Avatar initials="GZ" customDisplaySize="44px" backgroundColor="Accent8"/>
+                            <VBox class="sapUiSmallMarginBegin">
+                                <Title text="Gold Zari" level="H5"/>
+                                <Text text="Accessory • 24 pcs sold this month" class="msuOrderQty"/>
+                            </VBox>
+                        </HBox>
+                        <VBox alignItems="End">
+                            <Title text="₹1.5L" level="H5"/>
+                            <ObjectStatus text="-4%" state="Error" inverted="true" class="msuStatusPill"/>
+                        </VBox>
+                    </HBox>
+                </CustomListItem>
+
+                <CustomListItem class="msuOrderItem">
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiSmallMargin">
+                        <HBox alignItems="Center">
+                            <Avatar initials="CS" customDisplaySize="44px" backgroundColor="Accent2"/>
+                            <VBox class="sapUiSmallMarginBegin">
+                                <Title text="Cotton Saree" level="H5"/>
+                                <Text text="Everyday • 71 pcs sold this month" class="msuOrderQty"/>
+                            </VBox>
+                        </HBox>
+                        <VBox alignItems="End">
+                            <Title text="₹0.7L" level="H5"/>
+                            <ObjectStatus text="+22%" state="Success" inverted="true" class="msuStatusPill"/>
+                        </VBox>
+                    </HBox>
+                </CustomListItem>
+
+            </List>
+
+            <!-- ========== STORE PERFORMANCE ========== -->
+            <Title text="STORE PERFORMANCE" class="msuSectionTitle"/>
+
+            <l:Grid defaultSpan="XL6 L6 M12 S12" hSpacing="1" vSpacing="1">
+
+                <VBox class="msuKpiCard">
+                    <HBox justifyContent="SpaceBetween" alignItems="Center">
+                        <VBox>
+                            <Title text="Commercial St." level="H5"/>
+                            <Text text="Bengaluru" class="msuStockSubtext"/>
+                        </VBox>
+                        <Title text="₹3.2L" class="msuMetricValue"/>
+                    </HBox>
+                    <ProgressIndicator percentValue="85" state="Success" showValue="false" height="6px" class="sapUiSmallMarginTop"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <HBox justifyContent="SpaceBetween" alignItems="Center">
+                        <VBox>
+                            <Title text="Jubilee Hills" level="H5"/>
+                            <Text text="Hyderabad" class="msuStockSubtext"/>
+                        </VBox>
+                        <Title text="₹2.1L" class="msuMetricValue"/>
+                    </HBox>
+                    <ProgressIndicator percentValue="65" state="Warning" showValue="false" height="6px" class="sapUiSmallMarginTop"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <HBox justifyContent="SpaceBetween" alignItems="Center">
+                        <VBox>
+                            <Title text="HSR Layout" level="H5"/>
+                            <Text text="Bengaluru" class="msuStockSubtext"/>
+                        </VBox>
+                        <Title text="₹1.5L" class="msuMetricValue"/>
+                    </HBox>
+                    <ProgressIndicator percentValue="50" state="Warning" showValue="false" height="6px" class="sapUiSmallMarginTop"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <HBox justifyContent="SpaceBetween" alignItems="Center">
+                        <VBox>
+                            <Title text="Vijayawada" level="H5"/>
+                            <Text text="Andhra Pradesh" class="msuStockSubtext"/>
+                        </VBox>
+                        <Title text="₹0.9L" class="msuMetricValue"/>
+                    </HBox>
+                    <ProgressIndicator percentValue="35" state="Error" showValue="false" height="6px" class="sapUiSmallMarginTop"/>
+                </VBox>
+
+            </l:Grid>
+
+        </content>
+    </Page>
+</mvc:View>

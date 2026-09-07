@@ -1,0 +1,136 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page
+        showHeader="false"
+        enableScrolling="false"
+        class="msuLoginPage">
+
+        <content>
+
+            <HBox
+                fitContainer="true"
+                justifyContent="Center"
+                alignItems="Center"
+                class="msuLoginWrapper">
+
+                <VBox
+                    width="430px"
+                    class="msuLoginCard">
+
+                    <!-- LOGO -->
+                    <VBox
+                        alignItems="Center"
+                        class="msuLoginHeader">
+
+                        <Avatar
+                            initials="MSU"
+                            displayShape="Circle"
+                            displaySize="Custom"
+                            customDisplaySize="72px"
+                            customFontSize="20px"
+                            backgroundColor="Accent6"
+                            class="msuLoginLogo"/>
+
+                        <Title
+                            text="MSU Vendor Portal"
+                            level="H1"
+                            class="msuLoginTitle"/>
+
+                        <Text
+                            text="Sign in to access your vendor account"
+                            textAlign="Center"
+                            class="msuLoginSubtitle"/>
+
+                    </VBox>
+
+
+                    <!-- USER ID -->
+                    <VBox class="sapUiMediumMarginTop">
+
+                        <Label
+                            text="USER ID"
+                            class="msuLoginLabel"/>
+
+                        <Input
+                            id="userIdInput"
+                            value="{local>/login/userId}"
+                            placeholder="Enter your User ID"
+                            submit="onLogin"
+                            class="msuLoginInput"/>
+
+                    </VBox>
+
+
+                    <!-- PASSWORD -->
+                    <VBox class="sapUiSmallMarginTop">
+
+                        <Label
+                            text="PASSWORD"
+                            class="msuLoginLabel"/>
+
+                        <Input
+                            id="passwordInput"
+                            value="{local>/login/password}"
+                            type="Password"
+                            placeholder="Enter your password"
+                            submit="onLogin"
+                            class="msuLoginInput"/>
+
+                    </VBox>
+
+
+                    <!-- ERROR MESSAGE -->
+                    <MessageStrip
+                        text="{local>/login/errorMessage}"
+                        type="Error"
+                        showIcon="true"
+                        showCloseButton="false"
+                        visible="{= !!${local>/login/errorMessage} }"
+                        class="sapUiSmallMarginTop"/>
+
+
+                    <!-- LOGIN -->
+                    <Button
+                        text="Sign In"
+                        type="Emphasized"
+                        width="100%"
+                        press="onLogin"
+                        class="msuLoginButton sapUiMediumMarginTop"/>
+
+
+                    <!-- DEMO CREDENTIALS -->
+                    <VBox
+                        class="msuDemoLoginBox sapUiMediumMarginTop">
+
+                        <Text
+                            text="Demo Credentials"
+                            class="msuDemoTitle"/>
+
+                        <Text
+                            text="User ID: vendor001"
+                            class="msuDemoText"/>
+
+                        <Text
+                            text="Password: 1234"
+                            class="msuDemoText"/>
+
+                    </VBox>
+
+
+                    <Text
+                        text="© 2026 MSU Vendor Portal"
+                        textAlign="Center"
+                        class="msuLoginFooter sapUiMediumMarginTop"/>
+
+                </VBox>
+
+            </HBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

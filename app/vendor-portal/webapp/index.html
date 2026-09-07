@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSU - Vendor Portal</title>
+
+    <!-- ✅ QR Code library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- ✅ JsBarcode for Code128, EAN13 -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+
+    <!-- ✅ bwip-js for Data Matrix and 100+ barcodes -->
+    <script src="https://cdn.jsdelivr.net/npm/bwip-js@4.3.2/dist/bwip-js-min.js"></script>
+
+    <script id="sap-ui-bootstrap"
+        src="https://sapui5.hana.ondemand.com/1.120.0/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-resourceroots='{"msu.vendorportal": "./"}'
+        data-sap-ui-libs="sap.m,sap.ui.layout,sap.f,sap.tnt,sap.ui.core"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+        data-sap-ui-frameOptions="trusted">
+    </script>
+</head>
+<body class="sapUiBody" id="content">
+    <div data-sap-ui-component
+         data-name="msu.vendorportal"
+         data-id="container"
+         data-settings='{"id": "vendorportal"}'
+         style="height: 100vh"></div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+
+    <Page showHeader="false" class="msuPage">
+        <content>
+            
+            <!-- Header Row -->
+            <HBox justifyContent="SpaceBetween" alignItems="Center" class="msuContentHeader">
+                <VBox>
+                    <Title text="Good day, {local>/vendor/name}" level="H2" class="msuPageTitle"/>
+                    <Text text="{local>/vendor/location}" class="msuPageSub"/>
+                </VBox>
+                <Button text="Sync" icon="sap-icon://refresh" type="Attention" class="msuSyncBtn" press="onSync"/>
+            </HBox>
+
+            <!-- KPI Cards -->
+            <l:Grid defaultSpan="XL3 L3 M6 S12" hSpacing="1" vSpacing="1" class="msuKpiGrid">
+                
+                <VBox class="msuKpiCard">
+                    <Title text="{local>/dashboard/openPOs}" class="msuKpiValue"/>
+                    <Text text="OPEN POS" class="msuKpiLabel"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <Title text="{local>/dashboard/totalSales}" class="msuKpiValue"/>
+                    <Text text="TOTAL SALES (YTD)" class="msuKpiLabel"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <Title text="{local>/dashboard/inTransit}" class="msuKpiValue"/>
+                    <Text text="IN TRANSIT" class="msuKpiLabel"/>
+                </VBox>
+
+                <VBox class="msuKpiCard">
+                    <Title text="{local>/dashboard/trending}" class="msuKpiValue"/>
+                    <Text text="TRENDING ITEMS" class="msuKpiLabel"/>
+                </VBox>
+
+            </l:Grid>
+
+            <!-- Recent Orders -->
+            <Title text="RECENT ORDERS" class="msuSectionTitle"/>
+            
+            <List items="{local>/recentOrders}" class="msuOrderList" showSeparators="None">
+                <CustomListItem class="msuOrderItem" type="Active" press="onOrderPress">
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiSmallMargin">
+                        <HBox alignItems="Center">
+                            <Avatar 
+                                initials="{local>initials}" 
+                                displaySize="M"
+                                customDisplaySize="48px"
+                                customFontSize="18px"
+                                class="msuOrderAvatar"
+                                backgroundColor="Accent6"/>
+                            <VBox class="sapUiSmallMarginBegin">
+                                <HBox alignItems="Center">
+                                    <Title text="{local>id}" level="H5" class="msuOrderId"/>
+                                    <Text text="{local>date}" class="msuOrderDate sapUiSmallMarginBegin"/>
+                                </HBox>
+                                <HBox class="sapUiTinyMarginTop">
+                                    <ObjectStatus text="{local>product}" state="Warning" inverted="true" class="msuTag"/>
+                                </HBox>
+                                <Text text="{local>qty}" class="msuOrderQty sapUiTinyMarginTop"/>
+                            </VBox>
+                        </HBox>
+                        <ObjectStatus 
+                            text="{local>status}" 
+                            state="{= ${local>status} === 'Confirmed' ? 'Success' : 'Information'}"
+                            inverted="true"
+                            class="msuStatusPill"/>
+                    </HBox>
+                </CustomListItem>
+            </List>
+
+        </content>
+    </Page>
+</mvc:View>

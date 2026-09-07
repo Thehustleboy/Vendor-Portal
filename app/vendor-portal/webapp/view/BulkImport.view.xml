@@ -1,0 +1,28 @@
+<mvc:View controllerName="msu.vendorportal.controller.BulkImport" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+    <Page showHeader="false" class="msuPage">
+        <content>
+            <HBox alignItems="Center" class="msuContentHeader">
+                <Button icon="sap-icon://navigation-left-arrow" type="Transparent" text="All Tools" press="onNavBack" class="msuBackBtn"/>
+                <Title text="Bulk Import" level="H2" class="msuPageTitle sapUiSmallMarginBegin"/>
+            </HBox>
+            <VBox class="msuFormCard">
+                <Label text="IMPORT TYPE" class="msuFormLabel"/>
+                <Select selectedKey="products" width="100%" class="sapUiTinyMarginTop">
+                    <core:Item key="products" text="Products / SKUs"/>
+                    <core:Item key="inventory" text="Inventory Levels"/>
+                    <core:Item key="orders" text="Purchase Orders"/>
+                </Select>
+                <Label text="UPLOAD FILE" class="msuFormLabel sapUiMediumMarginTop"/>
+                <VBox class="msuUploadZone sapUiTinyMarginTop">
+                    <core:Icon src="sap-icon://upload-to-cloud" size="3rem" color="#EB6D2F"/>
+                    <Title text="Drop CSV / Excel file here" level="H5" textAlign="Center" class="sapUiSmallMarginTop"/>
+                    <Text text="or click to browse (max 10MB)" class="sapUiTinyMarginTop"/>
+                    <u:FileUploader id="fileUploader" name="importFile" buttonText="Choose File" placeholder="No file selected" class="sapUiMediumMarginTop"/>
+                </VBox>
+                <MessageStrip text="Download template first to see required columns" type="Information" showIcon="true" class="sapUiMediumMarginTop"/>
+                <Button text="Download Template" icon="sap-icon://download" press="onDownloadTemplate" class="sapUiMediumMarginTop"/>
+                <Button text="Import Data" type="Attention" press="onImport" class="msuFullBtn sapUiMediumMarginTop"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

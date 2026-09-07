@@ -1,0 +1,3447 @@
+/* ============================================================
+   MSU VENDOR PORTAL
+   Complete Styling
+   Portal + Stock + Tools + Full Screen Login
+   ============================================================ */
+
+
+/* ============================================================
+   1. GLOBAL
+   ============================================================ */
+
+html,
+body,
+#content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    background: #FAFBFC;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   2. SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CBD5E0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #A0AEC0;
+}
+
+
+/* ============================================================
+   3. TOOL PAGE
+   ============================================================ */
+
+.msuToolPage {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.sapTntToolPage {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* ============================================================
+   4. TOP HEADER
+   ============================================================ */
+
+.msuHeader {
+    background: #FFFFFF !important;
+    border-bottom: 1px solid #E4E7EB !important;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.04) !important;
+
+    padding: 0 20px !important;
+    height: 56px !important;
+}
+
+.msuLogo .sapMTitle,
+.msuLogo {
+    color: #EB6D2F !important;
+    font-weight: 800 !important;
+    font-size: 1.15rem !important;
+    letter-spacing: -0.5px !important;
+    margin-left: 8px !important;
+}
+
+.msuHeaderSub {
+    color: #4A5568 !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+    margin-left: 16px !important;
+}
+
+
+/* ============================================================
+   5. USER BOX
+   ============================================================ */
+
+.msuUserBox {
+    background: #FFF3E8;
+
+    padding:
+        4px 10px
+        4px 14px;
+
+    border-radius: 20px;
+
+    margin-right: 8px;
+
+    transition:
+        all 0.15s ease;
+}
+
+.msuUserBox:hover {
+    background: #FFE4CC;
+}
+
+.msuUserName {
+    color: #C7501F !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    margin-right: 8px !important;
+}
+
+.msuUserAvatar {
+    border: 2px solid #FFFFFF;
+}
+
+
+/* ============================================================
+   6. SIDE NAVIGATION
+   ============================================================ */
+
+.sapTntSideNavigation,
+.sapTntSideNavigation .sapTntNavLI {
+    background: #FFFFFF !important;
+    border-right: 1px solid #E4E7EB !important;
+}
+
+.sapTntNavLI .sapTntNavLIItem {
+    color: #4A5568 !important;
+    font-weight: 500 !important;
+
+    border-radius: 0 !important;
+
+    margin:
+        2px 0 !important;
+
+    transition:
+        all 0.15s ease;
+}
+
+.sapTntNavLI .sapTntNavLIItem:hover {
+    background: #F7FAFC !important;
+    color: #EB6D2F !important;
+}
+
+.sapTntNavLI
+.sapTntNavLIItem.sapTntNavLIItemSelected {
+    background: #FFF3E8 !important;
+    border-left: 3px solid #EB6D2F !important;
+    color: #EB6D2F !important;
+    font-weight: 600 !important;
+}
+
+.sapTntNavLI
+.sapTntNavLIItem.sapTntNavLIItemSelected
+.sapTntNavLIText {
+    color: #EB6D2F !important;
+}
+
+.sapTntNavLI
+.sapTntNavLIItem.sapTntNavLIItemSelected
+.sapUiIcon {
+    color: #EB6D2F !important;
+}
+
+
+/* ============================================================
+   7. PAGE
+   ============================================================ */
+
+.msuPage {
+    background: #FAFBFC !important;
+}
+
+.msuPage > section {
+    padding: 24px 32px !important;
+}
+
+.msuContentHeader {
+    margin-bottom: 24px;
+}
+
+.msuPageTitle {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #1A202C !important;
+    line-height: 1.2 !important;
+}
+
+.msuPageSub {
+    color: #718096 !important;
+    font-size: 0.85rem !important;
+    margin-top: 6px !important;
+}
+
+
+/* ============================================================
+   8. BACK BUTTON
+   ============================================================ */
+
+.msuBackBtn {
+    color: #EB6D2F !important;
+    font-weight: 600 !important;
+
+    padding:
+        4px 8px !important;
+}
+
+.msuBackBtn:hover {
+    background: #FFF3E8 !important;
+}
+
+
+/* ============================================================
+   9. BUTTONS
+   ============================================================ */
+
+.msuSyncBtn {
+    background: #F7B267 !important;
+    color: #FFFFFF !important;
+
+    border: none !important;
+    border-radius: 20px !important;
+
+    font-weight: 600 !important;
+
+    padding:
+        6px 18px !important;
+
+    box-shadow:
+        0 2px 4px
+        rgba(247, 178, 103, 0.30);
+
+    transition:
+        all 0.15s ease;
+}
+
+.msuSyncBtn:hover {
+    background: #EB6D2F !important;
+
+    box-shadow:
+        0 4px 8px
+        rgba(235, 109, 47, 0.40);
+}
+
+.sapMBtnAttention {
+    background: #EB6D2F !important;
+    color: #FFFFFF !important;
+    border-color: #EB6D2F !important;
+}
+
+.sapMBtnAttention:hover {
+    background: #D65F26 !important;
+}
+
+
+/* ============================================================
+   10. TOOL BUTTON
+   ============================================================ */
+
+.msuToolBtn {
+    background: #EB6D2F !important;
+    color: #FFFFFF !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    font-weight: 600 !important;
+
+    padding:
+        6px 20px !important;
+
+    margin-top: 12px !important;
+}
+
+
+/* ============================================================
+   11. FULL BUTTON
+   ============================================================ */
+
+.msuFullBtn {
+    width: 100% !important;
+
+    background: #EB6D2F !important;
+    color: #FFFFFF !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+
+    padding: 12px !important;
+
+    height: 44px !important;
+
+    box-shadow:
+        0 2px 6px
+        rgba(235, 109, 47, 0.25);
+
+    transition:
+        all 0.15s ease;
+}
+
+.msuFullBtn:hover {
+    background: #D65F26 !important;
+
+    box-shadow:
+        0 4px 10px
+        rgba(235, 109, 47, 0.35);
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   12. ADD SKU
+   ============================================================ */
+
+.msuAddSkuBtn {
+    width: 100% !important;
+
+    background: transparent !important;
+    color: #EB6D2F !important;
+
+    border:
+        2px dashed
+        #EB6D2F !important;
+
+    border-radius: 8px !important;
+
+    font-weight: 600 !important;
+
+    padding: 14px !important;
+
+    height: 48px !important;
+
+    transition:
+        all 0.15s ease;
+}
+
+.msuAddSkuBtn:hover {
+    background: #FFF3E8 !important;
+    border-color: #D65F26 !important;
+    color: #D65F26 !important;
+}
+
+
+/* ============================================================
+   13. KPI GRID
+   ============================================================ */
+
+.msuKpiGrid {
+    margin-bottom: 32px !important;
+}
+
+
+/* ============================================================
+   14. KPI CARDS
+   ============================================================ */
+
+.msuKpiCard {
+    background: #FFFFFF;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius: 12px;
+
+    padding:
+        24px 28px;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.02);
+
+    transition:
+        all 0.2s ease;
+
+    margin:
+        6px !important;
+}
+
+.msuKpiCard:hover {
+    box-shadow:
+        0 6px 16px
+        rgba(0, 0, 0, 0.08);
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        #EB6D2F;
+}
+
+.msuKpiValue .sapMTitle {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: #1A202C !important;
+    line-height: 1 !important;
+}
+
+.msuKpiLabel {
+    color: #718096 !important;
+
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 1px !important;
+
+    margin-top: 10px !important;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   15. SECTION TITLE
+   ============================================================ */
+
+.msuSectionTitle {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+
+    letter-spacing:
+        1.2px !important;
+
+    color:
+        #A0AEC0 !important;
+
+    margin:
+        24px 0
+        12px 0 !important;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* ============================================================
+   16. ORDER LIST
+   ============================================================ */
+
+.msuOrderList {
+    background: transparent !important;
+    border: none !important;
+}
+
+.msuOrderItem {
+    background: #FFFFFF !important;
+
+    border:
+        1px solid
+        #E4E7EB !important;
+
+    border-radius:
+        10px !important;
+
+    margin-bottom:
+        10px !important;
+
+    padding:
+        4px !important;
+
+    transition:
+        all 0.15s ease;
+}
+
+.msuOrderItem:hover {
+    border-color:
+        #EB6D2F !important;
+
+    box-shadow:
+        0 4px 12px
+        rgba(235, 109, 47, 0.10) !important;
+
+    transform:
+        translateX(2px);
+}
+
+.msuOrderAvatar {
+    border:
+        2px solid
+        #FFFFFF;
+
+    box-shadow:
+        0 2px 4px
+        rgba(0, 0, 0, 0.08);
+}
+
+.msuOrderId .sapMTitle {
+    font-size:
+        0.95rem !important;
+
+    font-weight:
+        600 !important;
+
+    color:
+        #1A202C !important;
+}
+
+.msuOrderDate {
+    color:
+        #A0AEC0 !important;
+
+    font-size:
+        0.8rem !important;
+}
+
+.msuOrderQty {
+    color:
+        #718096 !important;
+
+    font-size:
+        0.8rem !important;
+
+    font-weight:
+        500 !important;
+}
+
+
+/* ============================================================
+   17. TAGS
+   ============================================================ */
+
+.msuTag .sapMObjStatusText {
+    font-size:
+        0.7rem !important;
+
+    font-weight:
+        600 !important;
+
+    padding:
+        3px 10px !important;
+
+    border-radius:
+        4px !important;
+
+    background:
+        #FFF3E8 !important;
+
+    color:
+        #C7501F !important;
+
+    margin-right:
+        4px !important;
+
+    border:
+        none !important;
+
+    display:
+        inline-block;
+}
+
+.msuTagRow > * {
+    margin-right:
+        4px !important;
+
+    margin-bottom:
+        4px !important;
+}
+
+.msuStaffTag .sapMObjStatusText {
+    background:
+        #F7FAFC !important;
+
+    color:
+        #4A5568 !important;
+
+    border:
+        1px solid
+        #E2E8F0 !important;
+}
+
+
+/* ============================================================
+   18. STATUS PILLS
+   ============================================================ */
+
+.msuStatusPill .sapMObjStatusText {
+    font-size:
+        0.75rem !important;
+
+    font-weight:
+        700 !important;
+
+    padding:
+        4px 14px !important;
+
+    border-radius:
+        12px !important;
+
+    text-transform:
+        capitalize;
+}
+
+.msuStatusPill.sapMObjStatusSuccess
+.sapMObjStatusText {
+    background:
+        #E6F7EC !important;
+
+    color:
+        #2F855A !important;
+}
+
+.msuStatusPill.sapMObjStatusInformation
+.sapMObjStatusText {
+    background:
+        #E6F0FA !important;
+
+    color:
+        #2C5282 !important;
+}
+
+.msuStatusPill.sapMObjStatusWarning
+.sapMObjStatusText {
+    background:
+        #FEF5E7 !important;
+
+    color:
+        #B7791F !important;
+}
+
+
+/* ============================================================
+   19. STORE TABS
+   ============================================================ */
+
+.msuStoreTabs {
+    margin-bottom:
+        20px !important;
+}
+
+.msuStoreTabs
+.sapMSegBBtn.sapMSegBBtnSel {
+    background:
+        #EB6D2F !important;
+
+    color:
+        #FFFFFF !important;
+
+    border-color:
+        #EB6D2F !important;
+}
+
+
+/* ============================================================
+   20. STOCK GRID
+   ============================================================ */
+
+.msuStockGrid {
+    width:
+        100% !important;
+}
+
+.msuStockGrid > * {
+    margin-bottom:
+        12px !important;
+}
+
+.msuStockGrid > div {
+    min-width: 0;
+}
+
+
+/* ============================================================
+   21. STOCK CARD
+   ============================================================ */
+
+.msuStockCard {
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-left:
+        4px solid
+        #48BB78;
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.02);
+
+    transition:
+        all 0.2s ease;
+
+    margin:
+        6px !important;
+
+    min-height:
+        300px;
+
+    width:
+        100%;
+}
+
+.msuStockCard:hover {
+    box-shadow:
+        0 6px 16px
+        rgba(0, 0, 0, 0.08);
+
+    transform:
+        translateY(-2px);
+}
+
+.msuStockCard.warning {
+    border-left-color:
+        #F7B267;
+}
+
+.msuStockCard.critical {
+    border-left-color:
+        #E53E3E;
+}
+
+.msuStockCardInner {
+    padding:
+        20px;
+
+    width:
+        100%;
+
+    min-height:
+        295px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+.msuStockCardHeader {
+    width:
+        100% !important;
+}
+
+.msuStockProductHeader {
+    min-width:
+        0 !important;
+
+    flex:
+        1 !important;
+}
+
+.msuStockProductInfo {
+    min-width:
+        0 !important;
+
+    flex:
+        1 !important;
+}
+
+.msuStockProductTitle .sapMTitle {
+    font-size:
+        1rem !important;
+
+    font-weight:
+        700 !important;
+
+    color:
+        #1A202C !important;
+
+    line-height:
+        1.3 !important;
+}
+
+.msuStockSubtext {
+    color:
+        #A0AEC0 !important;
+
+    font-size:
+        0.75rem !important;
+
+    line-height:
+        1.4;
+}
+
+
+/* ============================================================
+   22. STOCK PRODUCT IMAGE
+   ============================================================ */
+
+.msuStockProductImage {
+    width:
+        100px !important;
+
+    height:
+        100px !important;
+
+    min-width:
+        100px !important;
+
+    min-height:
+        100px !important;
+
+    max-width:
+        100px !important;
+
+    max-height:
+        100px !important;
+
+    object-fit:
+        cover !important;
+
+    object-position:
+        center center !important;
+
+    border-radius:
+        10px !important;
+
+    border:
+        1px solid
+        #E2E8F0 !important;
+
+    background:
+        #F7FAFC !important;
+
+    margin-right:
+        14px !important;
+
+    flex-shrink:
+        0 !important;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.msuStockCard:hover
+.msuStockProductImage {
+    transform:
+        scale(1.03);
+
+    box-shadow:
+        0 5px 14px
+        rgba(0, 0, 0, 0.13);
+}
+
+
+/* ============================================================
+   23. LEGACY STOCK AVATAR IMAGE
+   ============================================================ */
+
+.msuStockImage {
+    margin-right:
+        10px !important;
+
+    border-radius:
+        10px !important;
+
+    overflow:
+        hidden !important;
+
+    border:
+        1px solid
+        #E4E7EB !important;
+
+    background:
+        #F7FAFC !important;
+
+    flex-shrink:
+        0;
+
+    box-shadow:
+        0 2px 6px
+        rgba(0, 0, 0, 0.08) !important;
+}
+
+.msuStockImage
+.sapFAvatarImageHolder {
+    background-size:
+        cover !important;
+
+    background-position:
+        center center !important;
+
+    background-repeat:
+        no-repeat !important;
+
+    border-radius:
+        10px !important;
+}
+
+
+/* ============================================================
+   24. STOCK METRICS
+   ============================================================ */
+
+.msuStockCard .msuTagRow {
+    width:
+        100%;
+}
+
+.msuMetricValue .sapMTitle {
+    font-size:
+        1.5rem !important;
+
+    font-weight:
+        700 !important;
+
+    color:
+        #1A202C !important;
+
+    line-height:
+        1 !important;
+}
+
+.msuMetricLabel {
+    color:
+        #A0AEC0 !important;
+
+    font-size:
+        0.75rem !important;
+
+    margin-top:
+        6px !important;
+
+    font-weight:
+        500 !important;
+}
+
+.msuStockMetrics {
+    padding:
+        12px 0;
+
+    border-top:
+        1px solid
+        #F1F5F9;
+
+    margin-top:
+        12px !important;
+
+    width:
+        100%;
+}
+
+.msuProgress {
+    border-radius:
+        3px !important;
+
+    overflow:
+        hidden;
+}
+
+.msuStockCard
+.msuProgress {
+    width:
+        100% !important;
+
+    margin-top:
+        12px !important;
+}
+
+
+/* ============================================================
+   25. TOOL CARDS
+   ============================================================ */
+
+.msuToolCard {
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius:
+        12px;
+
+    padding:
+        32px 20px;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.03);
+
+    transition:
+        all 0.2s ease;
+
+    cursor:
+        pointer;
+
+    text-align:
+        center;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        180px;
+
+    user-select:
+        none;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    margin:
+        6px !important;
+}
+
+.msuToolCard:hover {
+    border-color:
+        #EB6D2F !important;
+
+    box-shadow:
+        0 8px 24px
+        rgba(235, 109, 47, 0.15) !important;
+
+    transform:
+        translateY(-3px);
+}
+
+.msuToolCard:active {
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 4px 12px
+        rgba(235, 109, 47, 0.20) !important;
+}
+
+.msuToolCard::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -100%;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(235, 109, 47, 0.05),
+            transparent
+        );
+
+    transition:
+        left 0.6s;
+
+    pointer-events:
+        none;
+}
+
+.msuToolCard:hover::before {
+    left:
+        100%;
+}
+
+.msuToolIcon {
+    margin-bottom:
+        12px !important;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.msuToolCard:hover
+.msuToolIcon {
+    transform:
+        scale(1.15);
+}
+
+.msuToolTitle .sapMTitle {
+    font-size:
+        1rem !important;
+
+    font-weight:
+        700 !important;
+
+    color:
+        #1A202C !important;
+
+    margin-top:
+        8px !important;
+}
+
+.msuToolDesc {
+    color:
+        #718096 !important;
+
+    font-size:
+        0.8rem !important;
+
+    margin-top:
+        6px !important;
+
+    max-width:
+        220px;
+
+    line-height:
+        1.4;
+}
+
+
+/* ============================================================
+   26. ICON TAB BAR
+   ============================================================ */
+
+.msuTabs {
+    background:
+        transparent !important;
+}
+
+.msuTabs .sapMITBHead {
+    background:
+        transparent !important;
+
+    border-bottom:
+        1px solid
+        #E4E7EB !important;
+}
+
+.msuTabs
+.sapMITBFilter
+.sapMITBText {
+    color:
+        #718096 !important;
+
+    font-weight:
+        600 !important;
+
+    letter-spacing:
+        0.5px !important;
+
+    font-size:
+        0.85rem !important;
+}
+
+.msuTabs
+.sapMITBFilter.sapMITBSelected
+.sapMITBText {
+    color:
+        #EB6D2F !important;
+
+    font-weight:
+        700 !important;
+}
+
+.msuTabs
+.sapMITBFilter.sapMITBSelected {
+    border-bottom:
+        3px solid
+        #EB6D2F !important;
+}
+
+.msuTabs
+.sapMITBFilter:hover
+.sapMITBText {
+    color:
+        #EB6D2F !important;
+}
+
+
+/* ============================================================
+   27. FORM CARD
+   ============================================================ */
+
+.msuFormCard {
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius:
+        12px;
+
+    padding:
+        24px 28px;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.03);
+
+    max-width:
+        720px;
+}
+
+
+/* ============================================================
+   28. FORM LABELS
+   ============================================================ */
+
+.msuFormLabel {
+    color:
+        #718096 !important;
+
+    font-size:
+        0.7rem !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        1.2px !important;
+
+    text-transform:
+        uppercase !important;
+
+    margin-bottom:
+        4px !important;
+
+    display:
+        block !important;
+}
+
+
+/* ============================================================
+   29. FORMAT TABS
+   ============================================================ */
+
+.msuFormatTabs
+.sapMSegBBtn {
+    padding:
+        8px 18px !important;
+
+    font-size:
+        0.85rem !important;
+}
+
+.msuFormatTabs
+.sapMSegBBtn.sapMSegBBtnSel {
+    background:
+        #EB6D2F !important;
+
+    color:
+        #FFFFFF !important;
+
+    box-shadow:
+        0 2px 4px
+        rgba(235, 109, 47, 0.30) !important;
+}
+
+
+/* ============================================================
+   30. BARCODE
+   ============================================================ */
+
+.msuBarcodePreview {
+    padding:
+        24px !important;
+
+    background:
+        #FAFBFC !important;
+
+    border:
+        1px solid
+        #E4E7EB !important;
+
+    border-radius:
+        12px !important;
+
+    min-height:
+        280px;
+}
+
+#msu-barcode-container {
+    background:
+        #FFFFFF !important;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius:
+        8px;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(0, 0, 0, 0.02);
+
+    display:
+        flex !important;
+
+    align-items:
+        center !important;
+
+    justify-content:
+        center !important;
+
+    min-height:
+        200px;
+
+    padding:
+        20px;
+}
+
+#msu-barcode-canvas,
+#msu-barcode-svg {
+    max-width:
+        220px;
+
+    max-height:
+        220px;
+}
+
+.msuBarcodeCode {
+    font-family:
+        "Courier New",
+        monospace !important;
+
+    font-size:
+        0.8rem !important;
+
+    color:
+        #1A202C !important;
+
+    font-weight:
+        600 !important;
+
+    letter-spacing:
+        0.5px;
+}
+
+.msuBarcodeLabel {
+    color:
+        #718096 !important;
+
+    font-size:
+        0.75rem !important;
+
+    margin-top:
+        2px !important;
+}
+
+.msuBarcodeIcon {
+    padding:
+        20px;
+
+    background:
+        #FFFFFF;
+
+    border-radius:
+        8px;
+
+    border:
+        1px solid
+        #E4E7EB;
+}
+
+
+/* ============================================================
+   31. IDENTIFIER FORM
+   ============================================================ */
+
+.msuIdForm
+.sapMLabel {
+    color:
+        #4A5568 !important;
+
+    font-weight:
+        600 !important;
+
+    font-size:
+        0.8rem !important;
+
+    text-transform:
+        none !important;
+
+    letter-spacing:
+        0 !important;
+}
+
+.msuIdForm
+.sapMInputBaseInner {
+    background:
+        #FAFBFC !important;
+
+    border:
+        1px solid
+        #E4E7EB !important;
+
+    border-radius:
+        6px !important;
+
+    font-size:
+        0.85rem !important;
+}
+
+
+/* ============================================================
+   32. RESET LINK
+   ============================================================ */
+
+.msuResetLink {
+    color:
+        #EB6D2F !important;
+
+    font-size:
+        0.8rem !important;
+
+    text-align:
+        right;
+
+    display:
+        block;
+}
+
+
+/* ============================================================
+   33. REPLENISHMENT
+   ============================================================ */
+
+.msuSkuCard {
+    background:
+        #FAFBFC;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius:
+        8px;
+
+    padding:
+        16px;
+}
+
+.msuSkuSelect {
+    flex:
+        1;
+}
+
+.msuRemoveBtn {
+    color:
+        #718096 !important;
+
+    min-width:
+        32px !important;
+}
+
+.msuRemoveBtn:hover {
+    color:
+        #E53E3E !important;
+
+    background:
+        #FFF5F5 !important;
+}
+
+
+/* ============================================================
+   34. SPECIFICATION
+   ============================================================ */
+
+.msuSpecToggle {
+    color:
+        #EB6D2F !important;
+
+    font-size:
+        0.8rem !important;
+
+    font-weight:
+        600 !important;
+}
+
+.msuSpecBox {
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius:
+        6px;
+
+    padding:
+        8px 12px;
+}
+
+.msuSpecRow {
+    padding:
+        6px 0;
+
+    align-items:
+        center;
+
+    border-bottom:
+        1px solid
+        #F1F5F9;
+}
+
+.msuSpecRow:last-child {
+    border-bottom:
+        none;
+}
+
+.msuSpecCheck {
+    margin-right:
+        8px !important;
+}
+
+.msuSpecCheck
+.sapMCbBg.sapMCbMarkChecked {
+    background:
+        #EB6D2F !important;
+
+    border-color:
+        #EB6D2F !important;
+}
+
+.msuSpecLabel {
+    color:
+        #4A5568 !important;
+
+    font-size:
+        0.85rem !important;
+
+    font-weight:
+        500 !important;
+
+    min-width:
+        140px;
+}
+
+.msuSpecValue {
+    color:
+        #1A202C !important;
+
+    font-size:
+        0.85rem !important;
+
+    font-weight:
+        600 !important;
+
+    flex:
+        1;
+
+    text-align:
+        right;
+}
+
+
+/* ============================================================
+   35. INPUTS
+   ============================================================ */
+
+.sapMInputBaseInner:focus,
+.sapMTextAreaInner:focus,
+.sapMSelect:focus {
+    border-color:
+        #EB6D2F !important;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(235, 109, 47, 0.10) !important;
+}
+
+.sapMLabel {
+    color:
+        #4A5568 !important;
+
+    font-weight:
+        600 !important;
+
+    font-size:
+        0.8rem !important;
+
+    letter-spacing:
+        0.3px !important;
+}
+
+
+/* ============================================================
+   36. PROGRESS BAR
+   ============================================================ */
+
+.sapMPI
+.sapMPIBar {
+    border-radius:
+        3px !important;
+}
+
+.sapMPI.sapMPIStateSuccess
+.sapMPIBar {
+    background:
+        #48BB78 !important;
+}
+
+.sapMPI.sapMPIStateWarning
+.sapMPIBar {
+    background:
+        #F7B267 !important;
+}
+
+.sapMPI.sapMPIStateError
+.sapMPIBar {
+    background:
+        #E53E3E !important;
+}
+
+
+/* ============================================================
+   37. SEGMENTED BUTTON
+   ============================================================ */
+
+.sapMSegB {
+    background:
+        #F7FAFC !important;
+
+    border-radius:
+        8px !important;
+
+    padding:
+        4px !important;
+
+    border:
+        1px solid
+        #E4E7EB !important;
+}
+
+.sapMSegBBtn {
+    background:
+        transparent !important;
+
+    border:
+        none !important;
+
+    color:
+        #4A5568 !important;
+
+    font-weight:
+        600 !important;
+
+    border-radius:
+        6px !important;
+
+    padding:
+        6px 16px !important;
+
+    transition:
+        all 0.15s ease;
+}
+
+.sapMSegBBtn:hover {
+    background:
+        #EDF2F7 !important;
+
+    color:
+        #EB6D2F !important;
+}
+
+.sapMSegBBtn.sapMSegBBtnSel {
+    background:
+        #FFFFFF !important;
+
+    color:
+        #EB6D2F !important;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.10) !important;
+
+    font-weight:
+        700 !important;
+}
+
+
+/* ============================================================
+   38. AVATARS
+   ============================================================ */
+
+.sapFAvatar {
+    box-shadow:
+        0 2px 4px
+        rgba(0, 0, 0, 0.06);
+}
+
+.sapFAvatarColorAccent6 {
+    background:
+        linear-gradient(
+            135deg,
+            #8B4A9E 0%,
+            #A855F7 100%
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+}
+
+.sapFAvatarColorAccent8 {
+    background:
+        linear-gradient(
+            135deg,
+            #D69E2E 0%,
+            #F6AD55 100%
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+}
+
+.sapFAvatarColorAccent2 {
+    background:
+        linear-gradient(
+            135deg,
+            #38B2AC 0%,
+            #4FD1C5 100%
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+}
+
+
+/* ============================================================
+   39. MESSAGE STRIP
+   ============================================================ */
+
+.sapMMsgStrip {
+    border-radius:
+        8px !important;
+
+    border-left-width:
+        4px !important;
+}
+
+
+/* ============================================================
+   40. SELECT
+   ============================================================ */
+
+.sapMSlt {
+    background:
+        #FAFBFC !important;
+
+    border:
+        1px solid
+        #E4E7EB !important;
+
+    border-radius:
+        6px !important;
+}
+
+.sapMSlt:hover {
+    border-color:
+        #EB6D2F !important;
+}
+
+
+/* ============================================================
+   41. TEXT AREA
+   ============================================================ */
+
+.sapMTextArea
+.sapMTextAreaInner {
+    background:
+        #FAFBFC !important;
+
+    border:
+        1px solid
+        #E4E7EB !important;
+
+    border-radius:
+        6px !important;
+
+    padding:
+        10px !important;
+
+    font-family:
+        inherit !important;
+}
+
+
+/* ============================================================
+   42. UTILITY CLASSES
+   ============================================================ */
+
+.msuTextMuted {
+    color:
+        #A0AEC0 !important;
+}
+
+.msuTextPrimary {
+    color:
+        #EB6D2F !important;
+}
+
+.msuTextSuccess {
+    color:
+        #48BB78 !important;
+}
+
+.msuTextDanger {
+    color:
+        #E53E3E !important;
+}
+
+.msuBgWhite {
+    background:
+        #FFFFFF !important;
+}
+
+.msuShadow {
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.06) !important;
+}
+
+.msuRounded {
+    border-radius:
+        12px !important;
+}
+
+.msuBorder {
+    border:
+        1px solid
+        #E4E7EB !important;
+}
+
+
+/* ============================================================
+   43. ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateY(10px);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateX(-20px);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+.msuKpiCard,
+.msuStockCard,
+.msuToolCard,
+.msuOrderItem,
+.msuFormCard {
+    animation:
+        fadeIn
+        0.3s ease-out;
+}
+
+
+/* ============================================================
+   44. FULL SCREEN LOGIN DIALOG
+
+   IMPORTANT:
+   This section makes the login completely cover the portal.
+   No header / side navigation should be visible.
+   ============================================================ */
+
+
+/* Dialog itself */
+.msuLoginDialog.sapMDialog {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    background: #F8FAFC !important;
+}
+
+
+/* Dialog content section */
+.msuLoginDialog
+.sapMDialogSection {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F8FAFC 0%,
+            #EDF2F7 55%,
+            #FFF7ED 100%
+        ) !important;
+}
+
+
+/* Dialog scroll container */
+.msuLoginDialog
+.sapMDialogScroll {
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    background:
+        transparent !important;
+}
+
+
+/* Actual content container */
+.msuLoginDialog
+.sapMDialogScrollCont {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    background:
+        transparent !important;
+}
+
+
+/* Remove default dialog content padding */
+.msuLoginDialog
+.sapMDialogScrollCont > * {
+    margin:
+        0 !important;
+}
+
+
+/* ============================================================
+   45. LOGIN WRAPPER
+   ============================================================ */
+
+.msuLoginWrapper {
+    position:
+        relative;
+
+    width:
+        100% !important;
+
+    height:
+        100% !important;
+
+    min-width:
+        100% !important;
+
+    min-height:
+        100vh !important;
+
+    margin:
+        0 !important;
+
+    padding:
+        24px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F8FAFC 0%,
+            #EDF2F7 55%,
+            #FFF7ED 100%
+        ) !important;
+
+    display:
+        flex !important;
+
+    align-items:
+        center !important;
+
+    justify-content:
+        center !important;
+}
+
+
+/* ============================================================
+   46. LOGIN CARD
+   ============================================================ */
+
+.msuLoginCard {
+    width:
+        430px !important;
+
+    max-width:
+        calc(100vw - 48px) !important;
+
+    background:
+        #FFFFFF !important;
+
+    border:
+        1px solid
+        #E2E8F0 !important;
+
+    border-radius:
+        18px !important;
+
+    padding:
+        38px !important;
+
+    box-shadow:
+        0 20px 60px
+        rgba(26, 32, 44, 0.14) !important;
+
+    animation:
+        msuLoginAppear
+        0.35s ease-out;
+
+    overflow:
+        hidden;
+}
+
+@keyframes msuLoginAppear {
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateY(16px)
+            scale(0.98);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ============================================================
+   47. LOGIN HEADER
+   ============================================================ */
+
+.msuLoginHeader {
+    width:
+        100%;
+}
+
+.msuLoginLogo {
+    margin-bottom:
+        18px !important;
+
+    box-shadow:
+        0 8px 24px
+        rgba(139, 74, 158, 0.22) !important;
+}
+
+.msuLoginTitle,
+.msuLoginTitle .sapMTitle {
+    color:
+        #1A202C !important;
+
+    font-size:
+        1.65rem !important;
+
+    font-weight:
+        700 !important;
+
+    margin-top:
+        4px !important;
+}
+
+.msuLoginSubtitle {
+    color:
+        #718096 !important;
+
+    font-size:
+        0.88rem !important;
+
+    line-height:
+        1.5 !important;
+
+    margin-top:
+        8px !important;
+}
+
+
+/* ============================================================
+   48. LOGIN LABELS
+   ============================================================ */
+
+.msuLoginLabel {
+    color:
+        #4A5568 !important;
+
+    font-size:
+        0.70rem !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        0.8px !important;
+
+    margin-bottom:
+        6px !important;
+}
+
+
+/* ============================================================
+   49. LOGIN INPUTS
+   ============================================================ */
+
+.msuLoginInput {
+    width:
+        100% !important;
+}
+
+.msuLoginInput
+.sapMInputBaseContentWrapper {
+    background:
+        #FAFBFC !important;
+
+    border:
+        1px solid
+        #CBD5E0 !important;
+
+    border-radius:
+        8px !important;
+
+    min-height:
+        44px !important;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.msuLoginInput
+.sapMInputBaseContentWrapper:hover {
+    border-color:
+        #EB6D2F !important;
+}
+
+.msuLoginInput.sapMFocus
+.sapMInputBaseContentWrapper {
+    border-color:
+        #EB6D2F !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(235, 109, 47, 0.10) !important;
+}
+
+.msuLoginInput
+.sapMInputBaseInner {
+    height:
+        42px !important;
+
+    font-size:
+        0.9rem !important;
+
+    background:
+        transparent !important;
+
+    color:
+        #1A202C !important;
+}
+
+
+/* ============================================================
+   50. LOGIN BUTTON
+   ============================================================ */
+
+.msuLoginButton {
+    width:
+        100% !important;
+}
+
+.msuLoginButton
+.sapMBtnInner {
+    width:
+        100% !important;
+
+    height:
+        46px !important;
+
+    border-radius:
+        9px !important;
+
+    background:
+        #EB6D2F !important;
+
+    border-color:
+        #EB6D2F !important;
+
+    color:
+        #FFFFFF !important;
+
+    font-size:
+        0.9rem !important;
+
+    font-weight:
+        700 !important;
+
+    text-shadow:
+        none !important;
+
+    transition:
+        all 0.2s ease;
+}
+
+.msuLoginButton
+.sapMBtnContent {
+    color:
+        #FFFFFF !important;
+
+    font-weight:
+        700 !important;
+
+    line-height:
+        44px !important;
+}
+
+.msuLoginButton:hover
+.sapMBtnInner {
+    background:
+        #D65F26 !important;
+
+    border-color:
+        #D65F26 !important;
+
+    box-shadow:
+        0 6px 16px
+        rgba(235, 109, 47, 0.25) !important;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ============================================================
+   51. DEMO CREDENTIAL BOX
+   ============================================================ */
+
+.msuDemoLoginBox {
+    background:
+        #FFF7ED !important;
+
+    border:
+        1px solid
+        #FED7AA !important;
+
+    border-radius:
+        9px !important;
+
+    padding:
+        12px 14px !important;
+}
+
+.msuDemoTitle {
+    color:
+        #C7501F !important;
+
+    font-size:
+        0.76rem !important;
+
+    font-weight:
+        700 !important;
+
+    margin-bottom:
+        4px !important;
+}
+
+.msuDemoText {
+    color:
+        #718096 !important;
+
+    font-size:
+        0.75rem !important;
+
+    line-height:
+        1.5 !important;
+}
+
+
+/* ============================================================
+   52. LOGIN FOOTER
+   ============================================================ */
+
+.msuLoginFooter {
+    width:
+        100% !important;
+
+    color:
+        #A0AEC0 !important;
+
+    font-size:
+        0.70rem !important;
+}
+
+
+/* ============================================================
+   53. UI5 BLOCK LAYER
+
+   Dialog modal backdrop.
+   ============================================================ */
+
+.sapUiBLy {
+    background:
+        #F8FAFC !important;
+
+    opacity:
+        1 !important;
+}
+
+
+/* ============================================================
+   54. RESPONSIVE - TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+
+    .msuPage > section {
+        padding:
+            20px 24px !important;
+    }
+
+    .msuStockProductImage {
+        width:
+            85px !important;
+
+        height:
+            85px !important;
+
+        min-width:
+            85px !important;
+
+        min-height:
+            85px !important;
+
+        max-width:
+            85px !important;
+
+        max-height:
+            85px !important;
+    }
+
+    .msuStockImage {
+        margin-right:
+            8px !important;
+    }
+
+    .msuStockCard {
+        min-height:
+            285px;
+    }
+
+    .msuStockCardInner {
+        min-height:
+            280px;
+    }
+}
+
+
+/* ============================================================
+   55. RESPONSIVE - SMALL TABLET
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .msuPage > section {
+        padding:
+            16px !important;
+    }
+
+    .msuPageTitle {
+        font-size:
+            1.25rem !important;
+    }
+
+    .msuKpiCard,
+    .msuToolCard,
+    .msuFormCard {
+        padding:
+            16px !important;
+
+        min-height:
+            auto;
+    }
+
+    .msuStockCard {
+        min-height:
+            auto !important;
+
+        padding:
+            0 !important;
+    }
+
+    .msuStockCardInner {
+        min-height:
+            auto !important;
+
+        padding:
+            16px !important;
+    }
+
+    .msuStockProductImage {
+        width:
+            70px !important;
+
+        height:
+            70px !important;
+
+        min-width:
+            70px !important;
+
+        min-height:
+            70px !important;
+
+        max-width:
+            70px !important;
+
+        max-height:
+            70px !important;
+
+        margin-right:
+            10px !important;
+    }
+
+    .msuStockImage {
+        width:
+            58px !important;
+
+        height:
+            58px !important;
+
+        margin-right:
+            8px !important;
+    }
+
+    .msuStockProductTitle
+    .sapMTitle {
+        font-size:
+            0.9rem !important;
+    }
+
+    .msuStockMetrics {
+        padding-top:
+            10px;
+    }
+
+    .msuFormCard {
+        max-width:
+            100%;
+    }
+
+    .msuUserName {
+        display:
+            none !important;
+    }
+
+    .msuKpiValue
+    .sapMTitle {
+        font-size:
+            1.5rem !important;
+    }
+
+    .msuLoginCard {
+        width:
+            420px !important;
+
+        padding:
+            32px !important;
+    }
+}
+
+
+/* ============================================================
+   56. RESPONSIVE - MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .msuLoginWrapper {
+        padding:
+            16px !important;
+    }
+
+    .msuLoginCard {
+        width:
+            100% !important;
+
+        max-width:
+            420px !important;
+
+        padding:
+            28px 22px !important;
+
+        border-radius:
+            14px !important;
+    }
+
+    .msuLoginTitle,
+    .msuLoginTitle .sapMTitle {
+        font-size:
+            1.4rem !important;
+    }
+
+    .msuLoginSubtitle {
+        font-size:
+            0.82rem !important;
+    }
+}
+
+
+/* ============================================================
+   57. RESPONSIVE - SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .msuHeaderSub {
+        display:
+            none !important;
+    }
+
+    .msuSpecLabel {
+        min-width:
+            100px !important;
+
+        font-size:
+            0.75rem !important;
+    }
+
+    .msuSpecValue {
+        font-size:
+            0.75rem !important;
+    }
+
+    .msuStockProductImage {
+        width:
+            60px !important;
+
+        height:
+            60px !important;
+
+        min-width:
+            60px !important;
+
+        min-height:
+            60px !important;
+
+        max-width:
+            60px !important;
+
+        max-height:
+            60px !important;
+    }
+
+    .msuStockImage {
+        width:
+            50px !important;
+
+        height:
+            50px !important;
+    }
+
+    .msuStockCardInner {
+        padding:
+            13px !important;
+    }
+
+    .msuStockSubtext {
+        font-size:
+            0.68rem !important;
+    }
+
+    .msuMetricValue
+    .sapMTitle {
+        font-size:
+            1rem !important;
+    }
+
+    .msuMetricLabel {
+        font-size:
+            0.68rem !important;
+    }
+
+    .msuLoginWrapper {
+        padding:
+            12px !important;
+    }
+
+    .msuLoginCard {
+        padding:
+            24px 18px !important;
+
+        border-radius:
+            14px !important;
+    }
+
+    .msuLoginTitle,
+    .msuLoginTitle .sapMTitle {
+        font-size:
+            1.3rem !important;
+    }
+
+    .msuLoginSubtitle {
+        font-size:
+            0.8rem !important;
+    }
+}
+
+
+/* ============================================================
+   58. PRINT
+   ============================================================ */
+
+@media print {
+
+    .sapTntSideNavigation,
+    .msuHeader,
+    .msuBackBtn,
+    .msuFullBtn {
+        display:
+            none !important;
+    }
+
+    body {
+        background:
+            #FFFFFF !important;
+    }
+
+    .msuFormCard {
+        border:
+            none !important;
+
+        box-shadow:
+            none !important;
+    }
+}
+
+
+/* ============================================================
+   59. CLICKABLE
+   ============================================================ */
+
+.msuClickable {
+    cursor:
+        pointer;
+
+    transition:
+        all 0.15s ease;
+}
+
+.msuClickable:hover {
+    opacity:
+        0.85;
+}
+
+
+/* ============================================================
+   60. SPACING HELPERS
+   ============================================================ */
+
+.msuMt10 {
+    margin-top:
+        10px !important;
+}
+
+.msuMt20 {
+    margin-top:
+        20px !important;
+}
+
+.msuMt30 {
+    margin-top:
+        30px !important;
+}
+
+.msuMb10 {
+    margin-bottom:
+        10px !important;
+}
+
+.msuMb20 {
+    margin-bottom:
+        20px !important;
+}
+
+.msuMb30 {
+    margin-bottom:
+        30px !important;
+}
+
+.msuPt10 {
+    padding-top:
+        10px !important;
+}
+
+.msuPt20 {
+    padding-top:
+        20px !important;
+}
+
+.msuPb10 {
+    padding-bottom:
+        10px !important;
+}
+
+.msuPb20 {
+    padding-bottom:
+        20px !important;
+}
+
+/* ============================================================
+   STOCK CLICKABLE TILE
+   ============================================================ */
+
+.msuStockTile.sapMCustomTile {
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+    border-radius: 12px !important;
+
+    box-shadow: none !important;
+
+    cursor: pointer !important;
+
+    overflow: visible !important;
+}
+
+.msuStockTile .sapMCustomTileContent {
+    width: 100% !important;
+    height: auto !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.msuStockTile:hover .msuStockCard {
+    border-color: #EB6D2F;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 0, 0, 0.10);
+
+    transform: translateY(-2px);
+}
+
+.msuStockTile:focus {
+    outline: none !important;
+}
+
+
+/* ============================================================
+   VIEW DETAILS TEXT
+   ============================================================ */
+
+.msuViewDetails {
+    color: #EB6D2F !important;
+
+    font-size: 0.75rem !important;
+
+    font-weight: 700 !important;
+
+    opacity: 0;
+
+    transform: translateX(-4px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.msuStockTile:hover .msuViewDetails {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* ============================================================
+   STOCK DETAIL PAGE
+   ============================================================ */
+
+.msuStockDetailPage {
+    width: 100% !important;
+
+    padding-bottom: 40px;
+}
+
+
+/* Detail header */
+
+.msuDetailHeader {
+    width: 100% !important;
+}
+
+.msuProductCategory {
+    color: #EB6D2F !important;
+
+    font-size: 0.72rem !important;
+
+    font-weight: 700 !important;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.msuDetailProductTitle {
+    color: #1A202C !important;
+
+    font-size: 1.8rem !important;
+
+    font-weight: 800 !important;
+
+    margin-top: 5px !important;
+}
+
+
+/* ============================================================
+   DETAIL BODY
+   ============================================================ */
+
+.msuStockDetailBody {
+    width: 100% !important;
+
+    gap: 40px;
+}
+
+
+/* ============================================================
+   IMAGE SECTION
+   ============================================================ */
+
+.msuStockDetailImageSection {
+    width: 430px !important;
+
+    flex-shrink: 0;
+}
+
+
+/* Large online image */
+
+.msuStockDetailMainImage {
+    width: 420px !important;
+
+    height: 440px !important;
+
+    object-fit: cover !important;
+
+    object-position: center center !important;
+
+    border-radius: 16px !important;
+
+    border:
+        1px solid
+        #E2E8F0 !important;
+
+    background:
+        #FFFFFF !important;
+
+    box-shadow:
+        0 12px 32px
+        rgba(0, 0, 0, 0.10);
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+/* ============================================================
+   IMAGE THUMBNAILS
+   ============================================================ */
+
+.msuThumbnailRow {
+    width: 100% !important;
+
+    margin-top: 14px !important;
+
+    gap: 10px;
+}
+
+.msuStockThumbnail {
+    width: 82px !important;
+
+    height: 82px !important;
+
+    object-fit: cover !important;
+
+    object-position: center !important;
+
+    border-radius: 10px !important;
+
+    border:
+        2px solid
+        #E2E8F0 !important;
+
+    background:
+        #FFFFFF !important;
+
+    cursor: pointer !important;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.msuStockThumbnail:hover {
+    border-color:
+        #EB6D2F !important;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 6px 14px
+        rgba(235, 109, 47, 0.20);
+}
+
+
+/* ============================================================
+   PRODUCT INFORMATION CARD
+   ============================================================ */
+
+.msuStockDetailInfo {
+    flex: 1;
+
+    min-width: 420px;
+
+    max-width: 650px;
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius:
+        14px;
+
+    padding:
+        26px 28px;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.04);
+}
+
+
+.msuDetailSectionTitle {
+    color:
+        #1A202C !important;
+
+    font-size:
+        1rem !important;
+
+    font-weight:
+        700 !important;
+
+    margin-bottom:
+        12px !important;
+}
+
+
+/* Product description */
+
+.msuProductDescription {
+    color:
+        #718096 !important;
+
+    font-size:
+        0.85rem !important;
+
+    line-height:
+        1.6 !important;
+
+    margin-bottom:
+        16px !important;
+}
+
+
+/* ============================================================
+   DETAIL ROW
+   ============================================================ */
+
+.msuDetailRow {
+    width: 100% !important;
+
+    min-height: 42px;
+
+    padding:
+        10px 0;
+
+    border-bottom:
+        1px solid
+        #EDF2F7;
+
+    align-items: center;
+}
+
+.msuDetailRow:last-child {
+    border-bottom: none;
+}
+
+.msuDetailLabel {
+    width:
+        165px !important;
+
+    min-width:
+        165px !important;
+
+    color:
+        #718096 !important;
+
+    font-size:
+        0.80rem !important;
+
+    font-weight:
+        600 !important;
+}
+
+.msuDetailValue {
+    color:
+        #1A202C !important;
+
+    font-size:
+        0.85rem !important;
+
+    font-weight:
+        600 !important;
+
+    flex:
+        1;
+}
+
+
+/* ============================================================
+   INVENTORY INFORMATION CARDS
+   ============================================================ */
+
+.msuDetailInfoCards {
+    width: 100% !important;
+
+    gap: 12px;
+}
+
+.msuMiniDetailCard {
+    min-width: 190px;
+
+    flex: 1;
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius:
+        10px;
+
+    padding:
+        18px 20px;
+
+    box-shadow:
+        0 1px 4px
+        rgba(0, 0, 0, 0.03);
+}
+
+.msuMiniDetailCard:hover {
+    border-color:
+        #EB6D2F;
+}
+
+.msuMiniLabel {
+    color:
+        #A0AEC0 !important;
+
+    font-size:
+        0.65rem !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        0.8px !important;
+}
+
+.msuMiniValue {
+    color:
+        #1A202C !important;
+
+    font-size:
+        0.9rem !important;
+
+    font-weight:
+        700 !important;
+
+    margin-top:
+        6px !important;
+}
+
+
+/* ============================================================
+   DETAIL STOCK SUMMARY
+   ============================================================ */
+
+.msuStockDetailMetrics {
+    width: 100% !important;
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid
+        #E4E7EB;
+
+    border-radius:
+        12px;
+
+    padding:
+        26px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.04);
+}
+
+.msuDetailMetricNumber {
+    color:
+        #1A202C !important;
+
+    font-size:
+        1.8rem !important;
+
+    font-weight:
+        800 !important;
+}
+
+.msuDetailProgress {
+    border-radius:
+        5px !important;
+
+    overflow:
+        hidden !important;
+}
+
+
+/* ============================================================
+   MAKE ORIGINAL STOCK IMAGE CONSISTENT
+   ============================================================ */
+
+.msuStockProductImage {
+    width:
+        70px !important;
+
+    height:
+        70px !important;
+
+    min-width:
+        70px !important;
+
+    min-height:
+        70px !important;
+
+    max-width:
+        70px !important;
+
+    max-height:
+        70px !important;
+
+    object-fit:
+        cover !important;
+
+    object-position:
+        center center !important;
+
+    border-radius:
+        10px !important;
+
+    border:
+        1px solid
+        #E2E8F0 !important;
+
+    background:
+        #F7FAFC !important;
+
+    margin-right:
+        14px !important;
+
+    flex-shrink:
+        0 !important;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    .msuStockDetailBody {
+        gap: 24px;
+    }
+
+    .msuStockDetailImageSection {
+        width:
+            350px !important;
+    }
+
+    .msuStockDetailMainImage {
+        width:
+            340px !important;
+
+        height:
+            370px !important;
+    }
+
+    .msuStockDetailInfo {
+        min-width:
+            350px;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .msuStockDetailBody {
+        display:
+            block !important;
+    }
+
+    .msuStockDetailImageSection {
+        width:
+            100% !important;
+    }
+
+    .msuStockDetailMainImage {
+        width:
+            100% !important;
+
+        height:
+            340px !important;
+    }
+
+    .msuStockDetailInfo {
+        width:
+            100% !important;
+
+        min-width:
+            0 !important;
+
+        max-width:
+            none !important;
+
+        margin-top:
+            24px;
+
+        padding:
+            20px;
+    }
+
+    .msuDetailLabel {
+        width:
+            125px !important;
+
+        min-width:
+            125px !important;
+    }
+
+    .msuMiniDetailCard {
+        min-width:
+            calc(50% - 8px);
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .msuStockDetailMainImage {
+        height:
+            285px !important;
+    }
+
+    .msuStockThumbnail {
+        width:
+            64px !important;
+
+        height:
+            64px !important;
+    }
+
+    .msuStockDetailInfo {
+        padding:
+            16px;
+    }
+
+    .msuDetailLabel {
+        width:
+            105px !important;
+
+        min-width:
+            105px !important;
+
+        font-size:
+            0.72rem !important;
+    }
+
+    .msuDetailValue {
+        font-size:
+            0.76rem !important;
+    }
+
+    .msuMiniDetailCard {
+        width:
+            100%;
+
+        min-width:
+            100%;
+    }
+
+}
+/* ============================================================
+   END
+   ============================================================ */

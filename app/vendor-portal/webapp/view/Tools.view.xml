@@ -1,0 +1,59 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.Tools"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+    <Page showHeader="false" class="msuPage">
+        <content>
+
+            <VBox class="msuContentHeader">
+                <Title text="Tools" level="H2" class="msuPageTitle"/>
+                <Text text="Utilities for your vendor operations" class="msuPageSub"/>
+            </VBox>
+
+            <l:Grid defaultSpan="XL4 L4 M6 S12" hSpacing="1" vSpacing="1">
+
+                <VBox class="msuToolCard" app:tool="replenish">
+                    <core:Icon src="sap-icon://request" size="2.5rem" color="#EB6D2F" class="msuToolIcon"/>
+                    <Title text="Replenishment Request" level="H5" class="msuToolTitle" textAlign="Center"/>
+                    <Text text="Request stock top-up for stores" class="msuToolDesc" textAlign="Center"/>
+                </VBox>
+
+                <VBox class="msuToolCard" app:tool="barcode">
+                    <core:Icon src="sap-icon://bar-code" size="2.5rem" color="#EB6D2F" class="msuToolIcon"/>
+                    <Title text="Barcode / QR Studio" level="H5" class="msuToolTitle" textAlign="Center"/>
+                    <Text text="Generate labels and codes" class="msuToolDesc" textAlign="Center"/>
+                </VBox>
+
+                <VBox class="msuToolCard" app:tool="bulk">
+                    <core:Icon src="sap-icon://excel-attachment" size="2.5rem" color="#EB6D2F" class="msuToolIcon"/>
+                    <Title text="Bulk Import" level="H5" class="msuToolTitle" textAlign="Center"/>
+                    <Text text="Upload CSV / Excel data" class="msuToolDesc" textAlign="Center"/>
+                </VBox>
+
+                <VBox class="msuToolCard" app:tool="reports">
+                    <core:Icon src="sap-icon://pie-chart" size="2.5rem" color="#EB6D2F" class="msuToolIcon"/>
+                    <Title text="Reports" level="H5" class="msuToolTitle" textAlign="Center"/>
+                    <Text text="Download sales &amp; inventory reports" class="msuToolDesc" textAlign="Center"/>
+                </VBox>
+
+                <VBox class="msuToolCard" app:tool="notifications">
+                    <core:Icon src="sap-icon://bell" size="2.5rem" color="#EB6D2F" class="msuToolIcon"/>
+                    <Title text="Notifications" level="H5" class="msuToolTitle" textAlign="Center"/>
+                    <Text text="Manage alerts &amp; preferences" class="msuToolDesc" textAlign="Center"/>
+                </VBox>
+
+                <VBox class="msuToolCard" app:tool="settings">
+                    <core:Icon src="sap-icon://settings" size="2.5rem" color="#EB6D2F" class="msuToolIcon"/>
+                    <Title text="Settings" level="H5" class="msuToolTitle" textAlign="Center"/>
+                    <Text text="Profile, security &amp; more" class="msuToolDesc" textAlign="Center"/>
+                </VBox>
+
+            </l:Grid>
+
+        </content>
+    </Page>
+</mvc:View>

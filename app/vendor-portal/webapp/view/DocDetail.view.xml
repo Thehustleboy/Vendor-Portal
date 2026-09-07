@@ -1,0 +1,10 @@
+<mvc:View controllerName="msu.vendorportal.controller.DocDetail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <Page title="Document Details" showNavButton="true" navButtonPress="onNavBack" class="msuPage">
+        <content>
+            <VBox class="sapUiMediumMargin">
+                <Title text="Document Details" level="H2"/>
+                <Text text="Details will show here" class="sapUiSmallMarginTop"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

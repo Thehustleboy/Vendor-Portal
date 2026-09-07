@@ -1,0 +1,247 @@
+{
+  "_version": "1.59.0",
+
+  "sap.app": {
+    "id": "msu.vendorportal",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+
+    "dataSources": {
+      "vendorService": {
+        "uri": "/vendor/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "msu.vendorportal.view.App",
+      "type": "XML",
+      "id": "app"
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ui.layout": {},
+        "sap.f": {},
+        "sap.tnt": {}
+      }
+    },
+
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+
+        "settings": {
+          "bundleName": "msu.vendorportal.i18n.i18n"
+        }
+      },
+
+      "local": {
+        "type": "sap.ui.model.json.JSONModel"
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "msu.vendorportal.view",
+        "controlId": "pageContainer",
+        "controlAggregation": "pages",
+        "async": true,
+        "transition": "slide"
+      },
+
+      "routes": [
+        {
+          "name": "home",
+          "pattern": "",
+          "target": "home"
+        },
+
+        {
+          "name": "stock",
+          "pattern": "stock",
+          "target": "stock"
+        },
+
+        {
+          "name": "stockDetail",
+          "pattern": "stock/{id}",
+          "target": "stockDetail"
+        },
+
+        {
+          "name": "sales",
+          "pattern": "sales",
+          "target": "sales"
+        },
+
+        {
+          "name": "docs",
+          "pattern": "docs",
+          "target": "docs"
+        },
+
+        {
+          "name": "docDetail",
+          "pattern": "docs/{type}/{id}",
+          "target": "docDetail"
+        },
+
+        {
+          "name": "createASN",
+          "pattern": "asn/create/{poId}",
+          "target": "createASN"
+        },
+
+        {
+          "name": "tools",
+          "pattern": "tools",
+          "target": "tools"
+        },
+
+        {
+          "name": "replenish",
+          "pattern": "tools/replenish",
+          "target": "replenish"
+        },
+
+        {
+          "name": "barcode",
+          "pattern": "tools/barcode",
+          "target": "barcode"
+        },
+
+        {
+          "name": "bulkImport",
+          "pattern": "tools/bulk",
+          "target": "bulkImport"
+        },
+
+        {
+          "name": "reports",
+          "pattern": "tools/reports",
+          "target": "reports"
+        },
+
+        {
+          "name": "notifications",
+          "pattern": "tools/notifications",
+          "target": "notifications"
+        },
+
+        {
+          "name": "settings",
+          "pattern": "tools/settings",
+          "target": "settings"
+        }
+      ],
+
+      "targets": {
+        "home": {
+          "viewName": "Home",
+          "viewId": "home"
+        },
+
+        "stock": {
+          "viewName": "Stock",
+          "viewId": "stock"
+        },
+
+        "stockDetail": {
+          "viewName": "StockDetail",
+          "viewId": "stockDetail"
+        },
+
+        "sales": {
+          "viewName": "Sales",
+          "viewId": "sales"
+        },
+
+        "docs": {
+          "viewName": "Docs",
+          "viewId": "docs"
+        },
+
+        "docDetail": {
+          "viewName": "DocDetail",
+          "viewId": "docDetail"
+        },
+
+        "createASN": {
+          "viewName": "CreateASN",
+          "viewId": "createASN"
+        },
+
+        "tools": {
+          "viewName": "Tools",
+          "viewId": "tools"
+        },
+
+        "replenish": {
+          "viewName": "Replenishment",
+          "viewId": "replenish"
+        },
+
+        "barcode": {
+          "viewName": "BarcodeStudio",
+          "viewId": "barcode"
+        },
+
+        "bulkImport": {
+          "viewName": "BulkImport",
+          "viewId": "bulkImport"
+        },
+
+        "reports": {
+          "viewName": "Reports",
+          "viewId": "reports"
+        },
+
+        "notifications": {
+          "viewName": "Notifications",
+          "viewId": "notifications"
+        },
+
+        "settings": {
+          "viewName": "Settings",
+          "viewId": "settings"
+        }
+      }
+    }
+  }
+}

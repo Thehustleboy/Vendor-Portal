@@ -1,0 +1,37 @@
+<mvc:View controllerName="msu.vendorportal.controller.Notifications" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <Page showHeader="false" class="msuPage">
+        <content>
+            <HBox alignItems="Center" class="msuContentHeader">
+                <Button icon="sap-icon://navigation-left-arrow" type="Transparent" text="All Tools" press="onNavBack" class="msuBackBtn"/>
+                <Title text="Notifications" level="H2" class="msuPageTitle sapUiSmallMarginBegin"/>
+            </HBox>
+            <VBox class="msuFormCard">
+                <Label text="EMAIL NOTIFICATIONS" class="msuFormLabel"/>
+                <VBox class="msuNotifBox sapUiTinyMarginTop">
+                    <HBox justifyContent="SpaceBetween" alignItems="Center" class="msuNotifRow">
+                        <VBox>
+                            <Text text="New Purchase Orders" class="msuNotifTitle"/>
+                            <Text text="Email when a new PO is created" class="msuNotifDesc"/>
+                        </VBox>
+                        <Switch state="true"/>
+                    </HBox>
+                    <HBox justifyContent="SpaceBetween" alignItems="Center" class="msuNotifRow">
+                        <VBox>
+                            <Text text="Invoice Approvals" class="msuNotifTitle"/>
+                            <Text text="Email when invoices are approved" class="msuNotifDesc"/>
+                        </VBox>
+                        <Switch state="true"/>
+                    </HBox>
+                    <HBox justifyContent="SpaceBetween" alignItems="Center" class="msuNotifRow">
+                        <VBox>
+                            <Text text="Payment Received" class="msuNotifTitle"/>
+                            <Text text="Email when payment is credited" class="msuNotifDesc"/>
+                        </VBox>
+                        <Switch state="true"/>
+                    </HBox>
+                </VBox>
+                <Button text="Save Preferences" type="Attention" press="onSave" class="msuFullBtn sapUiMediumMarginTop"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

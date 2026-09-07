@@ -1,0 +1,108 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    displayBlock="true"
+    height="100%">
+
+    <tnt:ToolPage id="toolPage">
+
+        <tnt:header>
+
+            <tnt:ToolHeader class="msuHeader">
+
+                <Button
+                    icon="sap-icon://menu2"
+                    type="Transparent"
+                    press="onSideNavToggle"/>
+
+                <Title
+                    text="MSU"
+                    class="msuLogo"/>
+
+                <Text
+                    text="Vendor Portal"
+                    class="msuHeaderSub"/>
+
+                <ToolbarSpacer/>
+
+                <HBox
+                    alignItems="Center"
+                    class="msuUserBox">
+
+                    <Text
+                        text="{local>/vendor/name}"
+                        class="msuUserName"/>
+
+                    <Avatar
+                        initials="{local>/vendor/initials}"
+                        displaySize="XS"
+                        backgroundColor="Accent6"
+                        class="msuUserAvatar"/>
+
+                </HBox>
+
+                <Button
+                    icon="sap-icon://log"
+                    type="Transparent"
+                    tooltip="Logout"
+                    press="onLogout"/>
+
+            </tnt:ToolHeader>
+
+        </tnt:header>
+
+
+        <tnt:sideContent>
+
+            <tnt:SideNavigation
+                id="sideNav"
+                itemSelect="onSideNavItemSelect">
+
+                <tnt:NavigationList
+                    id="navigationList"
+                    selectedKey="home">
+
+                    <tnt:NavigationListItem
+                        text="Home"
+                        icon="sap-icon://home"
+                        key="home"/>
+
+                    <tnt:NavigationListItem
+                        text="Stock"
+                        icon="sap-icon://line-chart"
+                        key="stock"/>
+
+                    <tnt:NavigationListItem
+                        text="Sales"
+                        icon="sap-icon://trend-up"
+                        key="sales"/>
+
+                    <tnt:NavigationListItem
+                        text="Docs"
+                        icon="sap-icon://document"
+                        key="docs"/>
+
+                    <tnt:NavigationListItem
+                        text="Tools"
+                        icon="sap-icon://wrench"
+                        key="tools"/>
+
+                </tnt:NavigationList>
+
+            </tnt:SideNavigation>
+
+        </tnt:sideContent>
+
+
+        <tnt:mainContents>
+
+            <NavContainer
+                id="pageContainer"/>
+
+        </tnt:mainContents>
+
+    </tnt:ToolPage>
+
+</mvc:View>

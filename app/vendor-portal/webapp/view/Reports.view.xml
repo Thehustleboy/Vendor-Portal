@@ -1,0 +1,25 @@
+<mvc:View controllerName="msu.vendorportal.controller.Reports" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page showHeader="false" class="msuPage">
+        <content>
+            <HBox alignItems="Center" class="msuContentHeader">
+                <Button icon="sap-icon://navigation-left-arrow" type="Transparent" text="All Tools" press="onNavBack" class="msuBackBtn"/>
+                <Title text="Reports" level="H2" class="msuPageTitle sapUiSmallMarginBegin"/>
+            </HBox>
+            <VBox class="msuFormCard">
+                <Label text="REPORT TYPE" class="msuFormLabel"/>
+                <Select width="100%" class="sapUiTinyMarginTop">
+                    <core:Item key="sales" text="Sales Report"/>
+                    <core:Item key="inventory" text="Inventory Report"/>
+                    <core:Item key="purchases" text="Purchase Report"/>
+                </Select>
+                <Label text="AVAILABLE REPORTS" class="msuFormLabel sapUiMediumMarginTop"/>
+                <List class="sapUiTinyMarginTop">
+                    <StandardListItem title="Monthly Sales — April 2026" description="Total: 7.7L" icon="sap-icon://pdf-attachment" type="Active"/>
+                    <StandardListItem title="Inventory Snapshot" description="Across 4 stores" icon="sap-icon://excel-attachment" type="Active"/>
+                    <StandardListItem title="Purchase Analysis Q1 2026" description="45 POs" icon="sap-icon://pdf-attachment" type="Active"/>
+                </List>
+                <Button text="Generate Report" type="Attention" press="onGenerate" class="msuFullBtn sapUiMediumMarginTop"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

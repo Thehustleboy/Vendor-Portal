@@ -1,0 +1,126 @@
+<mvc:View
+    controllerName="msu.vendorportal.controller.BarcodeStudio"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+
+    <Page showHeader="false" class="msuPage">
+        <content>
+
+            <!-- ========== BREADCRUMB HEADER ========== -->
+            <HBox alignItems="Center" class="msuContentHeader">
+                <Button 
+                    icon="sap-icon://navigation-left-arrow" 
+                    type="Transparent" 
+                    text="All Tools" 
+                    press="onNavBack"
+                    class="msuBackBtn"/>
+                <Title text="Barcode / QR Studio" level="H2" class="msuPageTitle sapUiSmallMarginBegin"/>
+            </HBox>
+
+            <VBox class="msuFormCard">
+
+                <!-- FORMAT -->
+                <Label text="FORMAT" class="msuFormLabel"/>
+                <SegmentedButton 
+                    selectedKey="{local>/barcode/format}"
+                    selectionChange="onFormatChange"
+                    class="msuFormatTabs sapUiTinyMarginTop">
+                    <items>
+                        <SegmentedButtonItem text="QR Code"     key="QR"/>
+                        <SegmentedButtonItem text="Code 128"    key="C128"/>
+                        <SegmentedButtonItem text="EAN-13"      key="EAN13"/>
+                        <SegmentedButtonItem text="Data Matrix" key="DM"/>
+                    </items>
+                </SegmentedButton>
+
+                <!-- PRODUCT / LABEL -->
+                <Label text="PRODUCT / LABEL" class="msuFormLabel sapUiMediumMarginTop"/>
+                <Select 
+                    selectedKey="{local>/barcode/product}"
+                    change="onProductChange"
+                    width="100%" 
+                    class="sapUiTinyMarginTop">
+                    <items>
+                        <core:Item key="Silk Saree"        text="Silk Saree"/>
+                        <core:Item key="Kanjeevaram Saree" text="Kanjeevaram Saree"/>
+                        <core:Item key="Cotton Saree"      text="Cotton Saree"/>
+                        <core:Item key="Gold Zari"         text="Gold Zari"/>
+                        <core:Item key="Silver Zari"       text="Silver Zari"/>
+                    </items>
+                </Select>
+
+                <!-- QUANTITY -->
+                <Label text="QUANTITY TO PRINT" class="msuFormLabel sapUiMediumMarginTop"/>
+                <Input 
+                    value="{local>/barcode/quantity}" 
+                    type="Number" 
+                    width="100%"
+                    class="sapUiTinyMarginTop"/>
+
+                <!-- ========== BARCODE PREVIEW ========== -->
+                <VBox alignItems="Center" class="msuBarcodePreview sapUiMediumMarginTop">
+                    <core:HTML content="&lt;div id=&quot;msu-qrcode&quot; style=&quot;padding:16px;background:white;border-radius:8px;display:inline-block;min-width:200px;min-height:200px;text-align:center;&quot;&gt;&lt;/div&gt;"/>
+                    <Text text="{local>/barcode/code}" class="msuBarcodeCode sapUiSmallMarginTop"/>
+                    <Text text="{local>/barcode/product} · {local>/barcode/formatName}" class="msuBarcodeLabel"/>
+                </VBox>
+
+                <!-- ========== ARTICLE IDENTIFIERS ========== -->
+                <Label text="ARTICLE IDENTIFIERS" class="msuFormLabel sapUiMediumMarginTop"/>
+
+                <f:SimpleForm 
+                    editable="true" 
+                    layout="ColumnLayout" 
+                    columnsL="2" 
+                    columnsM="2"
+                    columnsXL="2"
+                    class="msuIdForm sapUiTinyMarginTop">
+
+                    <Label text="Colour"/>
+                    <Input value="{local>/barcode/identifiers/colour}"/>
+
+                    <Label text="Size"/>
+                    <Input value="{local>/barcode/identifiers/size}"/>
+
+                    <Label text="Design No"/>
+                    <Input value="{local>/barcode/identifiers/designNo}"/>
+
+                    <Label text="Shade No"/>
+                    <Input value="{local>/barcode/identifiers/shadeNo}"/>
+
+                    <Label text="Weight"/>
+                    <Input value="{local>/barcode/identifiers/weight}"/>
+
+                    <Label text="Designer"/>
+                    <Input value="{local>/barcode/identifiers/designer}"/>
+
+                    <Label text="Merchandiser"/>
+                    <Input value="{local>/barcode/identifiers/merchandiser}"/>
+
+                    <Label text="Condition"/>
+                    <Input value="{local>/barcode/identifiers/condition}"/>
+
+                </f:SimpleForm>
+
+                <Link text="Reset to auto-generated" press="onResetIdentifiers" class="msuResetLink sapUiSmallMarginTop"/>
+
+                <!-- ========== ACTIONS ========== -->
+                <Button 
+                    text="Generate" 
+                    type="Attention" 
+                    press="onGenerate" 
+                    class="msuFullBtn sapUiMediumMarginTop"/>
+
+                <Button 
+                    text="Print / Save" 
+                    type="Attention" 
+                    press="onPrint" 
+                    class="msuFullBtn sapUiTinyMarginTop"/>
+
+            </VBox>
+
+        </content>
+    </Page>
+</mvc:View>
